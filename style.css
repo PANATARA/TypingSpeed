@@ -1,0 +1,225 @@
+html {
+    margin: 0;
+    padding: 0;
+    min-width:100%;
+    min-height:100%;
+    font: Arial 14px;
+    background: white
+    /* background: linear-gradient(to right, #91ddbd, #d4a963); */
+}
+
+#Hello {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding: 20px 10px;
+    color: black;
+    text-align: center;
+    font-size: 20vw; 
+    font-weight: bold;
+    position: fixed;
+    top: -5%;
+    width: 100%;
+    transition: 0.3s;
+    z-index: +1;
+}
+body {
+    height: 3000px;
+}
+.line {
+    position: absolute;
+    top: 56%;
+    height: 3px;
+    background-color: rgb(0, 0, 0);
+    width: 0;
+    transition: width 1s ease-in-out;
+}
+#line1 {
+    left: 0;
+    top: 125%;
+}
+#line2 {
+    right: 0%;
+    top: 165%;
+
+}
+#line3 {
+    left: 0%;
+    top: 205%;
+
+}
+#line4 {
+    right: 0%;
+    top: 245%;
+
+}
+
+
+/*CARD1CARD1CARD1CARD1CARD1CARD1CARD1CARD1CARD1CARD1CARD1CARD1CARD1CARD1CARD1CARD1CARD1CARD1CARD1CARD1CARD1CARD1CARD1*/
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 20%;
+    border-radius: 5px;
+    position: absolute;
+    left: 10%;
+    top: 300%;
+    height: 50px;
+
+}
+
+.card:hover {
+    box-shadow:0 8px 16px 0 rgba(0,0,0,0.2);
+    transform: scale(1.2);
+
+}
+
+img {
+    border-radius: 5px 5px 0 0;
+}
+
+.container {
+    padding: 2px 16px;
+   
+}
+
+/*CARD2CARD2CARD2CARD2CARD2CARD2CARD2CARD2CARD2CARD2CARD2CARD2CARD2CARD2CARD2CARD2CARD2CARD2CARD2CARD2CARD2CARD2CARD2*/
+.card2 {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 20%;
+    border-radius: 5px;
+    position: absolute;
+    right: 40%;
+    top: 300%;
+    height: 50px;
+
+}
+
+.card2:hover {
+    box-shadow:0 8px 16px 0 rgba(0,0,0,0.2);
+    transform: scale(1.2);
+
+}
+
+img {
+    border-radius: 5px 5px 0 0;
+}
+
+.container2 {
+    padding: 2px 16px;
+   
+}
+/*CARD3CARD3CARD3CARD3CARD3CARD3CARD3CARD3CARD3CARD3CARD3CARD3CARD3CARD3CARD3CARD3CARD3CARD3CARD3CARD3CARD3CARD3CARD3*/
+.card3 {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 20%;
+    border-radius: 5px;
+    position: absolute;
+    right: 10%;
+    top: 300%;
+    height: 50px;
+
+}
+
+.card3:hover {
+    box-shadow:0 8px 16px 0 rgba(0,0,0,0.2);
+    transform: scale(1.2);
+}
+
+img {
+    border-radius: 5px 5px 0 0;
+}
+
+.container3 {
+    padding: 2px 16px;
+   
+}
+
+/* #figna {
+    position: absolute;
+    top: 2500px;
+} */
+
+
+/* Меню Меню Меню Меню Меню Меню Меню Меню Меню Меню Меню Меню Меню Меню Меню Меню Меню Меню Меню Меню Меню Меню Меню Меню Меню Меню Меню Меню  */
+header{
+    background-color: black;
+    display:flex;
+    justify-content: center;
+    position: fixed;
+    left: 0%;
+    top: 0%;
+    right: 0%;
+    z-index: +1;
+}
+
+.Logo, .Top_menu {
+    margin-right: 25px;
+    display: inline-block;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    vertical-align: middle;
+}
+.Top_menu li{
+    margin-right: 25px;
+    display: inline-block;
+    vertical-align: middle;
+}
+.Top_menu a{
+    vertical-align: middle;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+}
+.Top_menu a:hover{
+    color: #d35710;
+}
+.Logo h1{
+    vertical-align: middle;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 30px;
+    color: white;
+}
+
+/* Меню Меню Меню Меню Меню Меню Меню Меню Меню Меню Меню Меню Меню Меню Меню Меню Меню Меню Меню Меню Меню Меню Меню Меню Меню Меню Меню Меню  */
+
+/* Появлени текста при скролле Появлени текста при скролле Появлени текста при скролле Появлени текста при скролле Появлени текста при скролле  */
+.element-animation0, .element-animation1, .element-animation2, .element-animation3  {
+    margin: 0rem 0;
+    font-size: 4rem;
+    font-weight: bold;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    /* Скроем элемент в начальном состоянии */
+    opacity: 0;
+    transform: translateY(20px);
+    /* position: absolute;
+    top: 100%;
+    left: 28%; */
+}
+.element-animation0 {
+    position: absolute;
+    top: 100%;
+    right: 3%;
+}
+.element-animation1 {
+    position: absolute;
+    top: 140%;
+    left: 3%;
+}
+.element-animation2 {
+    position: absolute;
+    top: 180%;
+    right: 3%;
+}
+.element-animation3 {
+    position: absolute;
+    top: 220%;
+    left: 3%;
+}
+  
+.element-animation0.element-show, .element-animation1.element-show, .element-animation2.element-show, .element-animation3.element-show  {
+    opacity: 1;
+    transition: all 1.5s;
+    transform: translateY(0%);
+}
+/* Появлени текста при скролле Появлени текста при скролле Появлени текста при скролле Появлени текста при скролле Появлени текста при скролле  */
