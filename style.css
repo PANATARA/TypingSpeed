@@ -6,6 +6,11 @@ html {
 #rectangle{
     background-color: rgba(255, 255, 255, 0.45);
     border-radius: 45px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+#Text{
+    padding: 7%;
 }
 
 @media (min-height: 768px){
@@ -16,6 +21,8 @@ html {
     top: 5%;
     left: 50%;
     transform: translateX(-50%);
+    font-size: 230%;
+
   }
 }
 
@@ -27,5 +34,6 @@ html {
     top: 5%;
     left: 50%;
     transform: translateX(-50%);
-  }
+    font-size: 120%;
+    }
 }
