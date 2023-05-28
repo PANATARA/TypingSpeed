@@ -103,6 +103,13 @@ button{
   .remain{
     padding-top: 3%;
   }
+  #remainTime{
+ 
+  }
+  
+  #remainSymbool{
+    padding-top: 7%;
+  }
 }
 
 @media (min-height: 767px){
@@ -110,14 +117,19 @@ button{
     padding-top: 0%;
     padding-bottom: 9%;
   }
-}
-
-#remainTime{
-
-}
-
-#remainSymbool{
-  padding-top: 7%;
+  #remainSymbool{
+    padding-top: 7%;
+    position: absolute;
+    top: -345%;
+    left: -32%;
+    font-size: 70%;
+  }
+  #remainTime{
+    position: absolute;
+    top: -333%;
+    left: 40%;
+    font-size: 70%;
+  }
 }
 
 @media (max-height: 767px){
