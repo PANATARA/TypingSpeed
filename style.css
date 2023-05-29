@@ -65,8 +65,15 @@ html {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 
   }
-  .remainMobile * {
-    padding-left: 5%;
+
+  #remainTimeMobile{
+    position: absolute;
+    left: 3%;
+  }
+
+  #remainSymboolMobile{
+    position: absolute;
+    right: 3%;
   }
 
   #divided{
@@ -74,7 +81,6 @@ html {
   }
   .setting * {
     padding-bottom:2px;
-    
   }
   
   .difficulty{
@@ -84,12 +90,24 @@ html {
   
   #difficultyValues{
     display: flex;
-    padding-left: 0px;
+    padding-left: 3%;
+    padding-right: 0%;
   }
   
   #difficultyValues p {
+    margin-right: 0%;
+  }
+  #difficultyValues1 {
     margin: 0%;
-    margin-left: 18px;
+    margin-left: 0%;
+  }
+  #difficultyValues2 {
+    margin: 0%;
+    margin-left: 40%;
+  }
+  #difficultyValues3 {
+    margin: 0%;
+    margin-left: 40%;
   }
   
   .NumberOfSymbol{
@@ -98,7 +116,8 @@ html {
   
   #NumberOfSymbolValues{
     display: flex;
-    padding-left: 35px;
+    padding-left: 10%;
+    padding-right: 0%;
   }
   
   #NumberOfSymbolValues p {
@@ -112,12 +131,20 @@ html {
   
   #laguageValues{
     display: flex;
-    padding-left: 75px;
+    padding-left: 31%;
+    padding-right: 0%;
   }
   
   #laguageValues p {
+    margin-right: 0%;
+  }
+  #laguageValuesRu {
     margin: 0%;
-    margin-left: 10px;
+    margin-left: 0%;
+  }
+  #laguageValuesEn {
+    margin: 0%;
+    margin-left: 40%;
   }
   
   .time{
@@ -126,12 +153,24 @@ html {
   
   #timeValues{
     display: flex;
-    padding-left: 69px;
+    padding-left: 24%;
+    padding-right: 0%;
   }
   
   #timeValues p {
+    margin-right: 0%;
+  }
+  #timeValues30 {
     margin: 0%;
-    margin-left: 0px;
+    margin-left: 0%;
+  }
+  #timeValues60 {
+    margin: 0%;
+    margin-left: 15%;
+  }
+  #timeValues90 {
+    margin: 0%;
+    margin-left: 15%;
   }
 }
 /* DESKTOP DESKTOP DESKTOP DESKTOP DESKTOP DESKTOP DESKTOP DESKTOP DESKTOP DESKTOP */
@@ -146,8 +185,6 @@ html {
     font-size: 120%;
   }
   .remainAndSetting{
-    display: flex;
-    white-space: nowrap;
     display: flex;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     position: absolute;
@@ -235,7 +272,7 @@ html {
   }
 }
 
-.setting * {
+/* .setting * {
   padding-bottom: 2px;
   
 }
@@ -295,4 +332,4 @@ html {
 #timeValues p {
   margin: 0%;
   margin-left: 0px;
-}
+} */
