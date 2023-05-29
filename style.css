@@ -281,6 +281,13 @@ html {
   margin: 50px 50px;
 }
 
+@media (min-height: 767px){
+  .section{
+    position: absolute;
+    top: 70%;
+  }
+}
+
 .section_item {
   display: flex;
   justify-content: center;
