@@ -272,6 +272,68 @@ html {
   }
 }
 
+.section {
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  height: 340px;
+  width: 200px;
+  margin: 50px 50px;
+}
+
+.section_item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 0 0 150px;
+  height: 200px;
+  font-size: 50px;
+  border-radius: 10px; /* добавляем закругление углов */
+  margin-right: 20px; /* добавляем отступ справа */
+  margin-bottom: 20px;
+}
+
+.item1 {
+  background-color: #FF7373;
+}
+
+.item2 {
+  background-color: #FF9640;
+}
+
+.item3 {
+  background-color: #5CCCCC;
+}
+
+.item4 {
+  background-color: #67E667;
+}
+
+.item5 {
+  background-color: #1D7373;
+}
+
+.item6 {
+  background-color: #c45ebe;
+}
+
+.item7 {
+  background-color: #753bac;
+}
+
+.item8 {
+  background-color: #441631;
+}
+
+.section::-webkit-scrollbar {
+  width: 0.5em; /* Ширина скроллбара */
+  background-color: transparent; /* Цвет фона скроллбара */
+}
+
+.section::-webkit-scrollbar-thumb {
+  background-color: transparent; /* Цвет ползунка скроллбара */
+}
+
 /* .setting * {
   padding-bottom: 2px;
   
