@@ -14,13 +14,19 @@ html {
     font-weight: 500;
 }
 
-button{
-  border: none;
-  background: none;
-
+.remainAndSetting *{
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
-@media (min-height: 768px){
+#remainSymbool{
+  padding-top: 7%;
+}
+
+/* MOBILE MOBILE MOBILE MOBILE MOBILE MOBILE MOBILE MOBILE MOBILE MOBILE */
+@media (min-height: 767px){
   #rectangle {
     width: 95%;
     height: 50%;
@@ -31,8 +37,101 @@ button{
     font-size: 230%;
 
   }
-}
+  .remainAndSetting{
+    display: flex;
+    white-space: nowrap;
+    display: flex;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 300%;
+    font-weight: 500;
+    flex-direction: column;
+    color: rgba(255, 255, 255, 0.71);
+  } 
+  .remain {
+    display: none;
+  } 
+  .remainMobile{
+    display: flex;
+    padding-left: 4%;
+    padding-top: 0%;
+    padding-bottom: 0%;
+    color: rgba(255, 255, 255, 0.71);
+    font-weight: 700;
+    font-size: 190%;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 
+  }
+
+  #divided{
+    display: none;
+  }
+  .setting * {
+    padding-bottom:2px;
+    
+  }
+  
+  .difficulty{
+    display: flex;
+    white-space: nowrap;
+  }
+  
+  #difficultyValues{
+    display: flex;
+    padding-left: 0px;
+  }
+  
+  #difficultyValues p {
+    margin: 0%;
+    margin-left: 18px;
+  }
+  
+  .NumberOfSymbol{
+    display: flex;
+  }
+  
+  #NumberOfSymbolValues{
+    display: flex;
+    padding-left: 35px;
+  }
+  
+  #NumberOfSymbolValues p {
+    margin: 0%;
+    margin-left: 0px;
+  }
+  
+  .laguage{
+    display: flex;
+  }
+  
+  #laguageValues{
+    display: flex;
+    padding-left: 75px;
+  }
+  
+  #laguageValues p {
+    margin: 0%;
+    margin-left: 10px;
+  }
+  
+  .time{
+    display: flex;
+  }
+  
+  #timeValues{
+    display: flex;
+    padding-left: 69px;
+  }
+  
+  #timeValues p {
+    margin: 0%;
+    margin-left: 0px;
+  }
+}
+/* DESKTOP DESKTOP DESKTOP DESKTOP DESKTOP DESKTOP DESKTOP DESKTOP DESKTOP DESKTOP */
 @media (max-height: 767px){
   #rectangle {
     width: 55%;
@@ -42,40 +141,7 @@ button{
     left: 50%;
     transform: translateX(-50%);
     font-size: 120%;
-    }
-}
-
-/* .remainAndSetting{
-  display: flex;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  position: absolute;
-  top: 65%;
-  left: 50%;
-  transform: translateX(-50%);
-  font-size: 150%;
-  font-weight: 500;
-  white-space: nowrap;
-  color: rgba(255, 255, 255, 0.71);
-} */
-
-@media (min-height: 768px){
-  .remainAndSetting{
-    display: flex;
-    white-space: nowrap;
-    display: flex;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-    position: absolute;
-    top: 65%;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 300%;
-    font-weight: 500;
-    flex-direction: column;
-    color: rgba(255, 255, 255, 0.71);
   }
-}
-
-@media (max-height: 767px){
   .remainAndSetting{
     display: flex;
     white-space: nowrap;
@@ -90,49 +156,12 @@ button{
     white-space: nowrap;
     color: rgba(255, 255, 255, 0.71);
   }
-}
-
-.remainAndSetting *{
-  padding-left: 10px;
-  padding-right: 10px;
-  margin-left: 10px;
-  margin-right: 10px;
-}
-
-@media (max-height: 767px){
   .remain{
     padding-top: 3%;
   }
-  #remainTime{
- 
+  .remainMobile{
+    display: none;
   }
-  
-  #remainSymbool{
-    padding-top: 7%;
-  }
-}
-
-@media (min-height: 767px){
-  .remain{
-    padding-top: 0%;
-    padding-bottom: 9%;
-  }
-  #remainSymbool{
-    padding-top: 7%;
-    position: absolute;
-    top: -345%;
-    left: -32%;
-    font-size: 70%;
-  }
-  #remainTime{
-    position: absolute;
-    top: -333%;
-    left: 40%;
-    font-size: 70%;
-  }
-}
-
-@media (max-height: 767px){
   #divided{
     height: 155px;
     width: 5px;
@@ -140,33 +169,77 @@ button{
     padding: 0;
     border-radius: 15px;
   }
-}
-
-@media (min-height: 768px){
-  #divided{
-    height: 5px;
-    width: 90%;
-    background-color: rgba(255, 255, 255, 0.45);
-    padding: 0;
-    border-radius: 15px;
+  .setting * {
+    padding-bottom: 2px;
+    
   }
-}
-
-.setting{
-
+  
+  .difficulty{
+    display: flex;
+    white-space: nowrap;
+  }
+  
+  #difficultyValues{
+    display: flex;
+    padding-left: 0px;
+  }
+  
+  #difficultyValues p {
+    margin: 0%;
+    margin-left: 18px;
+  }
+  
+  .NumberOfSymbol{
+    display: flex;
+  }
+  
+  #NumberOfSymbolValues{
+    display: flex;
+    padding-left: 35px;
+  }
+  
+  #NumberOfSymbolValues p {
+    margin: 0%;
+    margin-left: 0px;
+  }
+  
+  .laguage{
+    display: flex;
+  }
+  
+  #laguageValues{
+    display: flex;
+    padding-left: 75px;
+  }
+  
+  #laguageValues p {
+    margin: 0%;
+    margin-left: 10px;
+  }
+  
+  .time{
+    display: flex;
+  }
+  
+  #timeValues{
+    display: flex;
+    padding-left: 69px;
+  }
+  
+  #timeValues p {
+    margin: 0%;
+    margin-left: 0px;
+  }
 }
 
 .setting * {
   padding-bottom: 2px;
+  
 }
 
 .difficulty{
   display: flex;
   white-space: nowrap;
-}
-
-#difficultyText{
-
 }
 
 #difficultyValues{
