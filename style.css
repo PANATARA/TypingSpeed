@@ -311,7 +311,7 @@ html {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex: 0 0 150px;
+    flex: 0 0 323px;
     height: 200px;
     font-size: 50px;
     border-radius: 10px; /* добавляем закругление углов */
@@ -321,35 +321,35 @@ html {
 }
 
 .item1 {
-  background-color: #FF7373;
+  background-color: rgba(221, 160, 221, 0.65);
 }
 
 .item2 {
-  background-color: #FF9640;
+  background-color: rgba(255, 250, 205, 0.65);
 }
 
 .item3 {
-  background-color: #5CCCCC;
+  background-color: rgba(176, 224, 230, 0.65);
 }
 
 .item4 {
-  background-color: #67E667;
+  background-color: rgba(240, 128, 128, 0.65);
 }
 
 .item5 {
-  background-color: #1D7373;
+  background-color: rgba(255, 192, 203, 0.65);
 }
 
 .item6 {
-  background-color: #c45ebe;
+  background-color: rgba(152, 251, 152, 0.65);
 }
 
 .item7 {
-  background-color: #753bac;
+  background-color: rgba(255, 250, 205, 0.65);
 }
 
 .item8 {
-  background-color: #441631;
+  background-color: rgba(114, 172, 226, 0.65);
 }
 
 .section::-webkit-scrollbar {
