@@ -56,7 +56,7 @@ html {
   } 
   .remainMobile{
     display: flex;
-    padding-left: 4%;
+    padding-left: 0%;
     padding-top: 0%;
     padding-bottom: 0%;
     color: rgba(255, 255, 255, 0.71);
@@ -64,6 +64,9 @@ html {
     font-size: 190%;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 
+  }
+  .remainMobile * {
+    padding-left: 5%;
   }
 
   #divided{
