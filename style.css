@@ -271,6 +271,7 @@ html {
     margin-left: 0px;
   }
 }
+@media (max-height: 767px){
 
 .section {
   display: flex;
@@ -280,14 +281,6 @@ html {
   width: 200px;
   margin: 50px 50px;
 }
-
-@media (min-height: 767px){
-  .section{
-    position: absolute;
-    top: 70%;
-  }
-}
-
 .section_item {
   display: flex;
   justify-content: center;
@@ -298,6 +291,33 @@ html {
   border-radius: 10px; /* добавляем закругление углов */
   margin-right: 20px; /* добавляем отступ справа */
   margin-bottom: 20px;
+}
+}
+@media (min-height: 767px){
+  .section{
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translateX(-58%);
+    display: flex;
+    flex-direction: row; /* Горизонтальная прокрутка */
+    overflow-x: auto; /* Включаем горизонтальную прокрутку */
+    overflow-y: hidden; /* Отключаем вертикальную прокрутку */
+    height: 340px;
+    width: 660px;
+    margin: 50px 50px;
+  }
+  .section_item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 0 0 150px;
+    height: 200px;
+    font-size: 50px;
+    border-radius: 10px; /* добавляем закругление углов */
+    margin-right: 20px; /* добавляем отступ справа */
+    margin-bottom: 20px;
+  }
 }
 
 .item1 {
