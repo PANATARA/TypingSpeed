@@ -308,7 +308,7 @@ padding-top: 7%;
     overflow-x: auto; /* Включаем горизонтальную прокрутку */
     overflow-y: hidden; /* Отключаем вертикальную прокрутку */
     height: 280px;
-    width: 100vw;
+    width: 107%;
     margin: 0px 50px;
     /* overflow: auto; */
   }
@@ -320,13 +320,15 @@ padding-top: 7%;
     height: 250px;
     font-size: 50px;
     border-radius: 20px; /* добавляем закругление углов */
-    margin-right: 20px; /* добавляем отступ справа */
+    margin-right: 10px; /* добавляем отступ справа */
+    margin-left: 10px;
     margin-bottom: 0px;
     /* position: sticky;
     left: 0%; */
   }
   .item8 {
-    margin-right: 10%;
+    margin-right: 4%;
+
   }
   .item1 {
     margin-left: 10%;
