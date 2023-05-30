@@ -1,5 +1,5 @@
 html {
-  background: linear-gradient(to bottom, #6480e1, #de463c);
+  background: linear-gradient(to right, #6480e1, #de463c);
   height: 100%;
 }
 
@@ -43,8 +43,8 @@ padding-top: 7%;
   display: flex;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   position: absolute;
-  top: 60%;
-  left: 50%;
+  top: 59%;
+  left: 45%;
   transform: translateX(-50%);
   font-size: 300%;
   font-weight: 500;
@@ -277,9 +277,10 @@ padding-top: 7%;
 display: flex;
 flex-direction: column;
 overflow-y: auto;
-height: 340px;
+height: 150px;
 width: 200px;
 margin: 50px 50px;
+overflow: auto;
 }
 .section_item {
 display: flex;
@@ -290,8 +291,11 @@ height: 200px;
 font-size: 50px;
 border-radius: 10px; /* добавляем закругление углов */
 margin-right: 20px; /* добавляем отступ справа */
-margin-bottom: 20px;
+margin-bottom: 10px;
+position: sticky;
+top: 0%;
 }
+
 }
 @media (min-height: 767px){
 .section{
@@ -303,9 +307,10 @@ margin-bottom: 20px;
   flex-direction: row; /* Горизонтальная прокрутка */
   overflow-x: auto; /* Включаем горизонтальную прокрутку */
   overflow-y: hidden; /* Отключаем вертикальную прокрутку */
-  height: 340px;
-  width: 660px;
-  margin: 50px 50px;
+  height: 220px;
+  width: 330px;
+  margin: 0px 50px;
+  overflow: auto;
 }
 .section_item {
   display: flex;
@@ -314,10 +319,15 @@ margin-bottom: 20px;
   flex: 0 0 323px;
   height: 200px;
   font-size: 50px;
-  border-radius: 10px; /* добавляем закругление углов */
+  border-radius: 20px; /* добавляем закругление углов */
   margin-right: 20px; /* добавляем отступ справа */
   margin-bottom: 0px;
+  position: sticky;
+  left: 0%;
 }
+.item8 {
+  margin-right: 0%;
+  }
 }
 
 .item1 {
@@ -350,6 +360,7 @@ background-color: rgba(255, 250, 205, 0.65);
 
 .item8 {
 background-color: rgba(114, 172, 226, 0.65);
+
 }
 
 .section::-webkit-scrollbar {
@@ -360,135 +371,3 @@ background-color: transparent; /* Цвет фона скроллбара */
 .section::-webkit-scrollbar-thumb {
 background-color: transparent; /* Цвет ползунка скроллбара */
 }
-
-
-
-
-.slider{
-  height: 200px;
-  overflow: hidden;
-}
-
-@media (max-height: 768px){
-  .slider{
-    width: 40%;
-    transform: rotate(90deg);
-    position: absolute;
-    left: -12%;
-    top: 40%;
-  }
-  #next, #prev{
-    position: absolute;
-    top: 25%;
-    color: #fff;
-    background-color: transparent;
-    border: none;
-    font-size: xxx-large;
-    font-family: monospace;
-    font-weight: bold;
-    left: 350px;
-  }
-  #next{
-    left: unset;
-    right: 480px;
-  }
-}
-
-@media (min-height: 767px){
-  .slider{
-    width: 60%;
-    position: absolute;
-    left: 32%;
-    top: 80%;
-  }
-  #next, #prev{
-    position: relative;
-    top: 25%;
-    color: #fc0000;
-    background-color: transparent;
-    border: none;
-    font-size: 550%;
-    font-family: monospace;
-    font-weight: bold;
-    left: 370px;
-  }
-  #next{
-    left: unset;
-    right: 20px;
-  }
-}
-
-.item{
-  position: absolute;
-  width: 150px;
-  height: 200px;
-  text-align: justify;
-  background-color: #fff;
-  border-radius: 10px;
-  padding: 20px;
-  transition: 0.5s;
-  left: calc(50% - 110px);
-  top: 0;
-}
-
-/* .setting * {
-padding-bottom: 2px;
-
-}
-
-.difficulty{
-display: flex;
-white-space: nowrap;
-}
-
-#difficultyValues{
-display: flex;
-padding-left: 0px;
-}
-
-#difficultyValues p {
-margin: 0%;
-margin-left: 18px;
-}
-
-.NumberOfSymbol{
-display: flex;
-}
-
-#NumberOfSymbolValues{
-display: flex;
-padding-left: 35px;
-}
-
-#NumberOfSymbolValues p {
-margin: 0%;
-margin-left: 0px;
-}
-
-.laguage{
-display: flex;
-}
-
-#laguageValues{
-display: flex;
-padding-left: 75px;
-}
-
-#laguageValues p {
-margin: 0%;
-margin-left: 10px;
-}
-
-.time{
-display: flex;
-}
-
-#timeValues{
-display: flex;
-padding-left: 69px;
-}
-
-#timeValues p {
-margin: 0%;
-margin-left: 0px;
-} */
