@@ -273,60 +273,63 @@ padding-top: 7%;
 }
 @media (max-height: 767px){
 
-.section {
-display: flex;
-flex-direction: column;
-overflow-y: auto;
-height: 150px;
-width: 200px;
-margin: 50px 50px;
-overflow: auto;
-}
-.section_item {
-display: flex;
-justify-content: center;
-align-items: center;
-flex: 0 0 150px;
-height: 200px;
-font-size: 50px;
-border-radius: 10px; /* добавляем закругление углов */
-margin-right: 20px; /* добавляем отступ справа */
-margin-bottom: 10px;
-position: sticky;
-top: 0%;
-}
+  .section {
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    height: 150px;
+    width: 200px;
+    margin: 50px 50px;
+    overflow: auto;
+    }
+    .section_item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 0 0 150px;
+    height: 200px;
+    font-size: 50px;
+    border-radius: 10px; /* добавляем закругление углов */
+    margin-right: 20px; /* добавляем отступ справа */
+    margin-bottom: 10px;
+    position: sticky;
+    top: 0%;
+  }
 
 }
 @media (min-height: 767px){
-.section{
-  position: absolute;
-  top: 80%;
-  left: 50%;
-  transform: translateX(-58%);
-  display: flex;
-  flex-direction: row; /* Горизонтальная прокрутка */
-  overflow-x: auto; /* Включаем горизонтальную прокрутку */
-  overflow-y: hidden; /* Отключаем вертикальную прокрутку */
-  height: 260px;
-  width: 410px;
-  margin: 0px 50px;
-  overflow: auto;
-}
-.section_item {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex: 0 0 400px;
-  height: 250px;
-  font-size: 50px;
-  border-radius: 20px; /* добавляем закругление углов */
-  margin-right: 20px; /* добавляем отступ справа */
-  margin-bottom: 0px;
-  position: sticky;
-  left: 0%;
-}
-.item8 {
-  margin-right: 0%;
+  .section{
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translateX(-58%);
+    display: flex;
+    flex-direction: row; /* Горизонтальная прокрутка */
+    overflow-x: auto; /* Включаем горизонтальную прокрутку */
+    overflow-y: hidden; /* Отключаем вертикальную прокрутку */
+    height: 280px;
+    width: 100vw;
+    margin: 0px 50px;
+    /* overflow: auto; */
+  }
+  .section_item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 0 0 400px;
+    height: 250px;
+    font-size: 50px;
+    border-radius: 20px; /* добавляем закругление углов */
+    margin-right: 20px; /* добавляем отступ справа */
+    margin-bottom: 0px;
+    /* position: sticky;
+    left: 0%; */
+  }
+  .item8 {
+    margin-right: 10%;
+  }
+  .item1 {
+    margin-left: 10%;
   }
 }
 
