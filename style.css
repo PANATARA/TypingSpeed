@@ -307,8 +307,8 @@ top: 0%;
   flex-direction: row; /* Горизонтальная прокрутка */
   overflow-x: auto; /* Включаем горизонтальную прокрутку */
   overflow-y: hidden; /* Отключаем вертикальную прокрутку */
-  height: 220px;
-  width: 330px;
+  height: 260px;
+  width: 410px;
   margin: 0px 50px;
   overflow: auto;
 }
@@ -316,8 +316,8 @@ top: 0%;
   display: flex;
   justify-content: center;
   align-items: center;
-  flex: 0 0 323px;
-  height: 200px;
+  flex: 0 0 400px;
+  height: 250px;
   font-size: 50px;
   border-radius: 20px; /* добавляем закругление углов */
   margin-right: 20px; /* добавляем отступ справа */
