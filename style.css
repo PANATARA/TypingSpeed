@@ -1,367 +1,215 @@
 html {
-    background: linear-gradient(to bottom, #6480e1, #de463c);
-    height: 100%;
+  background: linear-gradient(to bottom, #6480e1, #de463c);
+  height: 100%;
 }
 
 #rectangle{
-    background-color: rgba(255, 255, 255, 0.45);
-    border-radius: 45px;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  background-color: rgba(255, 255, 255, 0.45);
+  border-radius: 45px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
 #Text{
-    padding: 7%;
-    font-weight: 500;
+  padding: 7%;
+  font-weight: 500;
 }
 
 .remainAndSetting *{
-  padding-left: 10px;
-  padding-right: 10px;
-  margin-left: 10px;
-  margin-right: 10px;
+padding-left: 10px;
+padding-right: 10px;
+margin-left: 10px;
+margin-right: 10px;
 }
 
 #remainSymbool{
-  padding-top: 7%;
+padding-top: 7%;
 }
 
 /* MOBILE MOBILE MOBILE MOBILE MOBILE MOBILE MOBILE MOBILE MOBILE MOBILE */
 @media (min-height: 767px){
-  #rectangle {
-    width: 95%;
-    height: 50%;
-    position: absolute;
-    top: 5%;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 230%;
+#rectangle {
+  width: 95%;
+  height: 50%;
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 230%;
 
-  }
-  .remainAndSetting{
-    display: flex;
-    white-space: nowrap;
-    display: flex;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-    position: absolute;
-    top: 60%;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 300%;
-    font-weight: 500;
-    flex-direction: column;
-    color: rgba(255, 255, 255, 0.71);
-  } 
-  .remain {
-    display: none;
-  } 
-  .remainMobile{
-    display: flex;
-    padding-left: 0%;
-    padding-top: 0%;
-    padding-bottom: 0%;
-    color: rgba(255, 255, 255, 0.71);
-    font-weight: 700;
-    font-size: 190%;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+.remainAndSetting{
+  display: flex;
+  white-space: nowrap;
+  display: flex;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 300%;
+  font-weight: 500;
+  flex-direction: column;
+  color: rgba(255, 255, 255, 0.71);
+} 
+.remain {
+  display: none;
+} 
+.remainMobile{
+  display: flex;
+  padding-left: 0%;
+  padding-top: 0%;
+  padding-bottom: 0%;
+  color: rgba(255, 255, 255, 0.71);
+  font-weight: 700;
+  font-size: 190%;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 
-  }
+}
 
-  #remainTimeMobile{
-    position: absolute;
-    left: 3%;
-  }
+#remainTimeMobile{
+  position: absolute;
+  left: 3%;
+}
 
-  #remainSymboolMobile{
-    position: absolute;
-    right: 3%;
-  }
+#remainSymboolMobile{
+  position: absolute;
+  right: 3%;
+}
 
-  #divided{
-    display: none;
-  }
-  .setting * {
-    padding-bottom:2px;
-  }
-  
-  .difficulty{
-    display: flex;
-    white-space: nowrap;
-  }
-  
-  #difficultyValues{
-    display: flex;
-    padding-left: 3%;
-    padding-right: 0%;
-  }
-  
-  #difficultyValues p {
-    margin-right: 0%;
-  }
-  #difficultyValues1 {
-    margin: 0%;
-    margin-left: 0%;
-  }
-  #difficultyValues2 {
-    margin: 0%;
-    margin-left: 40%;
-  }
-  #difficultyValues3 {
-    margin: 0%;
-    margin-left: 40%;
-  }
-  
-  .NumberOfSymbol{
-    display: flex;
-  }
-  
-  #NumberOfSymbolValues{
-    display: flex;
-    padding-left: 10%;
-    padding-right: 0%;
-  }
-  
-  #NumberOfSymbolValues p {
-    margin: 0%;
-    margin-left: 0px;
-  }
-  
-  .laguage{
-    display: flex;
-  }
-  
-  #laguageValues{
-    display: flex;
-    padding-left: 31%;
-    padding-right: 0%;
-  }
-  
-  #laguageValues p {
-    margin-right: 0%;
-  }
-  #laguageValuesRu {
-    margin: 0%;
-    margin-left: 0%;
-  }
-  #laguageValuesEn {
-    margin: 0%;
-    margin-left: 40%;
-  }
-  
-  .time{
-    display: flex;
-  }
-  
-  #timeValues{
-    display: flex;
-    padding-left: 24%;
-    padding-right: 0%;
-  }
-  
-  #timeValues p {
-    margin-right: 0%;
-  }
-  #timeValues30 {
-    margin: 0%;
-    margin-left: 0%;
-  }
-  #timeValues60 {
-    margin: 0%;
-    margin-left: 15%;
-  }
-  #timeValues90 {
-    margin: 0%;
-    margin-left: 15%;
-  }
+#divided{
+  display: none;
+}
+.setting * {
+  padding-bottom:2px;
+}
+
+.difficulty{
+  display: flex;
+  white-space: nowrap;
+}
+
+#difficultyValues{
+  display: flex;
+  padding-left: 3%;
+  padding-right: 0%;
+}
+
+#difficultyValues p {
+  margin-right: 0%;
+}
+#difficultyValues1 {
+  margin: 0%;
+  margin-left: 0%;
+}
+#difficultyValues2 {
+  margin: 0%;
+  margin-left: 40%;
+}
+#difficultyValues3 {
+  margin: 0%;
+  margin-left: 40%;
+}
+
+.NumberOfSymbol{
+  display: flex;
+}
+
+#NumberOfSymbolValues{
+  display: flex;
+  padding-left: 10%;
+  padding-right: 0%;
+}
+
+#NumberOfSymbolValues p {
+  margin: 0%;
+  margin-left: 0px;
+}
+
+.laguage{
+  display: flex;
+}
+
+#laguageValues{
+  display: flex;
+  padding-left: 31%;
+  padding-right: 0%;
+}
+
+#laguageValues p {
+  margin-right: 0%;
+}
+#laguageValuesRu {
+  margin: 0%;
+  margin-left: 0%;
+}
+#laguageValuesEn {
+  margin: 0%;
+  margin-left: 40%;
+}
+
+.time{
+  display: flex;
+}
+
+#timeValues{
+  display: flex;
+  padding-left: 24%;
+  padding-right: 0%;
+}
+
+#timeValues p {
+  margin-right: 0%;
+}
+#timeValues30 {
+  margin: 0%;
+  margin-left: 0%;
+}
+#timeValues60 {
+  margin: 0%;
+  margin-left: 15%;
+}
+#timeValues90 {
+  margin: 0%;
+  margin-left: 15%;
+}
 }
 /* DESKTOP DESKTOP DESKTOP DESKTOP DESKTOP DESKTOP DESKTOP DESKTOP DESKTOP DESKTOP */
 @media (max-height: 767px){
-  #rectangle {
-    width: 55%;
-    height: 50%;
-    position: absolute;
-    top: 5%;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 120%;
-  }
-  .remainAndSetting{
-    display: flex;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-    position: absolute;
-    top: 65%;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 150%;
-    font-weight: 500;
-    white-space: nowrap;
-    color: rgba(255, 255, 255, 0.71);
-  }
-  .remain{
-    padding-top: 3%;
-  }
-  .remainMobile{
-    display: none;
-  }
-  #divided{
-    height: 155px;
-    width: 5px;
-    background-color: rgba(255, 255, 255, 0.45);
-    padding: 0;
-    border-radius: 15px;
-  }
-  .setting * {
-    padding-bottom: 2px;
-    
-  }
-  
-  .difficulty{
-    display: flex;
-    white-space: nowrap;
-  }
-  
-  #difficultyValues{
-    display: flex;
-    padding-left: 0px;
-  }
-  
-  #difficultyValues p {
-    margin: 0%;
-    margin-left: 18px;
-  }
-  
-  .NumberOfSymbol{
-    display: flex;
-  }
-  
-  #NumberOfSymbolValues{
-    display: flex;
-    padding-left: 35px;
-  }
-  
-  #NumberOfSymbolValues p {
-    margin: 0%;
-    margin-left: 0px;
-  }
-  
-  .laguage{
-    display: flex;
-  }
-  
-  #laguageValues{
-    display: flex;
-    padding-left: 75px;
-  }
-  
-  #laguageValues p {
-    margin: 0%;
-    margin-left: 10px;
-  }
-  
-  .time{
-    display: flex;
-  }
-  
-  #timeValues{
-    display: flex;
-    padding-left: 69px;
-  }
-  
-  #timeValues p {
-    margin: 0%;
-    margin-left: 0px;
-  }
+#rectangle {
+  width: 55%;
+  height: 50%;
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 120%;
 }
-@media (max-height: 767px){
-
-.section {
+.remainAndSetting{
   display: flex;
-  flex-direction: column;
-  overflow-y: auto;
-  height: 340px;
-  width: 200px;
-  margin: 50px 50px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  position: absolute;
+  top: 65%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 150%;
+  font-weight: 500;
+  white-space: nowrap;
+  color: rgba(255, 255, 255, 0.71);
 }
-.section_item {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex: 0 0 150px;
-  height: 200px;
-  font-size: 50px;
-  border-radius: 10px; /* добавляем закругление углов */
-  margin-right: 20px; /* добавляем отступ справа */
-  margin-bottom: 20px;
+.remain{
+  padding-top: 3%;
 }
+.remainMobile{
+  display: none;
 }
-@media (min-height: 767px){
-  .section{
-    position: absolute;
-    top: 80%;
-    left: 50%;
-    transform: translateX(-58%);
-    display: flex;
-    flex-direction: row; /* Горизонтальная прокрутка */
-    overflow-x: auto; /* Включаем горизонтальную прокрутку */
-    overflow-y: hidden; /* Отключаем вертикальную прокрутку */
-    height: 340px;
-    width: 660px;
-    margin: 50px 50px;
-  }
-  .section_item {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex: 0 0 323px;
-    height: 200px;
-    font-size: 50px;
-    border-radius: 10px; /* добавляем закругление углов */
-    margin-right: 20px; /* добавляем отступ справа */
-    margin-bottom: 0px;
-  }
+#divided{
+  height: 155px;
+  width: 5px;
+  background-color: rgba(255, 255, 255, 0.45);
+  padding: 0;
+  border-radius: 15px;
 }
-
-.item1 {
-  background-color: rgba(221, 160, 221, 0.65);
-}
-
-.item2 {
-  background-color: rgba(255, 250, 205, 0.65);
-}
-
-.item3 {
-  background-color: rgba(176, 224, 230, 0.65);
-}
-
-.item4 {
-  background-color: rgba(240, 128, 128, 0.65);
-}
-
-.item5 {
-  background-color: rgba(255, 192, 203, 0.65);
-}
-
-.item6 {
-  background-color: rgba(152, 251, 152, 0.65);
-}
-
-.item7 {
-  background-color: rgba(255, 250, 205, 0.65);
-}
-
-.item8 {
-  background-color: rgba(114, 172, 226, 0.65);
-}
-
-.section::-webkit-scrollbar {
-  width: 0.5em; /* Ширина скроллбара */
-  background-color: transparent; /* Цвет фона скроллбара */
-}
-
-.section::-webkit-scrollbar-thumb {
-  background-color: transparent; /* Цвет ползунка скроллбара */
-}
-
-/* .setting * {
+.setting * {
   padding-bottom: 2px;
   
 }
@@ -421,4 +269,226 @@ html {
 #timeValues p {
   margin: 0%;
   margin-left: 0px;
+}
+}
+@media (max-height: 767px){
+
+.section {
+display: flex;
+flex-direction: column;
+overflow-y: auto;
+height: 340px;
+width: 200px;
+margin: 50px 50px;
+}
+.section_item {
+display: flex;
+justify-content: center;
+align-items: center;
+flex: 0 0 150px;
+height: 200px;
+font-size: 50px;
+border-radius: 10px; /* добавляем закругление углов */
+margin-right: 20px; /* добавляем отступ справа */
+margin-bottom: 20px;
+}
+}
+@media (min-height: 767px){
+.section{
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translateX(-58%);
+  display: flex;
+  flex-direction: row; /* Горизонтальная прокрутка */
+  overflow-x: auto; /* Включаем горизонтальную прокрутку */
+  overflow-y: hidden; /* Отключаем вертикальную прокрутку */
+  height: 340px;
+  width: 660px;
+  margin: 50px 50px;
+}
+.section_item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 0 0 323px;
+  height: 200px;
+  font-size: 50px;
+  border-radius: 10px; /* добавляем закругление углов */
+  margin-right: 20px; /* добавляем отступ справа */
+  margin-bottom: 0px;
+}
+}
+
+.item1 {
+background-color: rgba(221, 160, 221, 0.65);
+}
+
+.item2 {
+background-color: rgba(255, 250, 205, 0.65);
+}
+
+.item3 {
+background-color: rgba(176, 224, 230, 0.65);
+}
+
+.item4 {
+background-color: rgba(240, 128, 128, 0.65);
+}
+
+.item5 {
+background-color: rgba(255, 192, 203, 0.65);
+}
+
+.item6 {
+background-color: rgba(152, 251, 152, 0.65);
+}
+
+.item7 {
+background-color: rgba(255, 250, 205, 0.65);
+}
+
+.item8 {
+background-color: rgba(114, 172, 226, 0.65);
+}
+
+.section::-webkit-scrollbar {
+width: 0.5em; /* Ширина скроллбара */
+background-color: transparent; /* Цвет фона скроллбара */
+}
+
+.section::-webkit-scrollbar-thumb {
+background-color: transparent; /* Цвет ползунка скроллбара */
+}
+
+
+
+
+.slider{
+  height: 200px;
+  overflow: hidden;
+}
+
+@media (max-height: 768px){
+  .slider{
+    width: 40%;
+    transform: rotate(90deg);
+    position: absolute;
+    left: -12%;
+    top: 40%;
+  }
+  #next, #prev{
+    position: absolute;
+    top: 25%;
+    color: #fff;
+    background-color: transparent;
+    border: none;
+    font-size: xxx-large;
+    font-family: monospace;
+    font-weight: bold;
+    left: 350px;
+  }
+  #next{
+    left: unset;
+    right: 480px;
+  }
+}
+
+@media (min-height: 767px){
+  .slider{
+    width: 60%;
+    position: absolute;
+    left: 32%;
+    top: 80%;
+  }
+  #next, #prev{
+    position: relative;
+    top: 25%;
+    color: #fc0000;
+    background-color: transparent;
+    border: none;
+    font-size: 550%;
+    font-family: monospace;
+    font-weight: bold;
+    left: 370px;
+  }
+  #next{
+    left: unset;
+    right: 20px;
+  }
+}
+
+.item{
+  position: absolute;
+  width: 150px;
+  height: 200px;
+  text-align: justify;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  transition: 0.5s;
+  left: calc(50% - 110px);
+  top: 0;
+}
+
+/* .setting * {
+padding-bottom: 2px;
+
+}
+
+.difficulty{
+display: flex;
+white-space: nowrap;
+}
+
+#difficultyValues{
+display: flex;
+padding-left: 0px;
+}
+
+#difficultyValues p {
+margin: 0%;
+margin-left: 18px;
+}
+
+.NumberOfSymbol{
+display: flex;
+}
+
+#NumberOfSymbolValues{
+display: flex;
+padding-left: 35px;
+}
+
+#NumberOfSymbolValues p {
+margin: 0%;
+margin-left: 0px;
+}
+
+.laguage{
+display: flex;
+}
+
+#laguageValues{
+display: flex;
+padding-left: 75px;
+}
+
+#laguageValues p {
+margin: 0%;
+margin-left: 10px;
+}
+
+.time{
+display: flex;
+}
+
+#timeValues{
+display: flex;
+padding-left: 69px;
+}
+
+#timeValues p {
+margin: 0%;
+margin-left: 0px;
 } */
