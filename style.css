@@ -10,7 +10,7 @@ html {
 }
 
 #Text{
-  padding: 7%;
+  margin: 4%;
   font-weight: 500;
 }
 
@@ -34,7 +34,7 @@ padding-top: 7%;
   top: 5%;
   left: 50%;
   transform: translateX(-50%);
-  font-size: 230%;
+  font-size: 3.8vw;
 
 }
 .remainAndSetting{
@@ -176,13 +176,13 @@ padding-top: 7%;
 /* DESKTOP DESKTOP DESKTOP DESKTOP DESKTOP DESKTOP DESKTOP DESKTOP DESKTOP DESKTOP */
 @media (max-height: 767px){
 #rectangle {
-  width: 55%;
-  height: 50%;
+  width: 60%;
+  height: 55%;
   position: absolute;
   top: 5%;
   left: 50%;
   transform: translateX(-50%);
-  font-size: 120%;
+  font-size: 1.6vw;
 }
 .remainAndSetting{
   display: flex;
@@ -198,6 +198,7 @@ padding-top: 7%;
 }
 .remain{
   padding-top: 3%;
+  margin: 0%;
 }
 .remainMobile{
   display: none;
@@ -208,6 +209,7 @@ padding-top: 7%;
   background-color: rgba(255, 255, 255, 0.45);
   padding: 0;
   border-radius: 15px;
+  margin: 0%;
 }
 .setting * {
   padding-bottom: 2px;
@@ -277,10 +279,14 @@ padding-top: 7%;
     display: flex;
     flex-direction: column;
     overflow-y: auto;
-    height: 150px;
+    height: 310px;
     width: 200px;
-    margin: 50px 50px;
+    /* margin: 50px 50px; */
     overflow: auto;
+    position: absolute;
+    top: 29%;
+    transform: translateY(-50%);
+    margin-left: 0%;
     }
     .section_item {
     display: flex;
@@ -288,13 +294,17 @@ padding-top: 7%;
     align-items: center;
     flex: 0 0 150px;
     height: 200px;
-    font-size: 50px;
+    font-size: 1.59dvw;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-weight: 500;
+    text-align: center;
     border-radius: 10px; /* добавляем закругление углов */
     margin-right: 20px; /* добавляем отступ справа */
     margin-bottom: 10px;
-    position: sticky;
-    top: 0%;
+    /* position: sticky;
+    top: 0%; */
   }
+
 
 }
 @media (min-height: 767px){
