@@ -1,6 +1,7 @@
 html {
   background: linear-gradient(to right, #6480e1, #de463c);
   height: 100%;
+  width: 100%;
 }
 
 #rectangle{
