@@ -1,6 +1,6 @@
 {
-    "name": "TextSpeed",
-    "short_name": "TextSpeed",
+    "name": "TypingSpeed",
+    "short_name": "TypingSpeed",
     "start_url": "https://panatara.github.io/HELLO/",
     "display": "standalone",
     "background_color": "#ffffff",
