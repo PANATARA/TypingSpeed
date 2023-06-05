@@ -4,14 +4,6 @@ html {
   width: 100%;
 }
 
-#inputForMobile{
-  width: 95%;
-  height: 50%;
-  background-color: none;
-  color: none;
-  border: none;
-}
-
 #rectangle{
   background-color: rgba(255, 255, 255, 0.45);
   border-radius: 45px;
@@ -46,6 +38,16 @@ padding-top: 7%;
   transform: translateX(-50%);
   font-size: 3.8vw;
 
+}
+#inputForMobile{
+  width: 95vw;
+  height: 50%;
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+  opacity: 0;
 }
 .remainAndSetting{
   display: flex;
