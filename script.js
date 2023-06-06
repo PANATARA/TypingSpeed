@@ -1,6 +1,7 @@
 
 
 var text = document.getElementById('Text');
+var rectangle = document.getElementById('rectangle');
 var textContent = text.textContent;
 var ind = 0;
 
@@ -45,4 +46,6 @@ document.addEventListener("keydown", function(event) {
 
 function theme(){
     document.documentElement.style.setProperty('--primary-opacity', '1');
+    rectangle.style.color = "#b6b39e";
+    rectangle.style.background = "#141414";
 }
