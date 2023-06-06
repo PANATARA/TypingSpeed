@@ -1,6 +1,13 @@
+
+
 var text = document.getElementById('Text');
 var textContent = text.textContent;
 var ind = 0;
+
+function print(){
+    console.log(1234567);
+}
+
 
 function randomNum(min, max){
     return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -23,7 +30,6 @@ document.addEventListener("keydown", function(event) {
     var letter = event.key;
     var before = textContent.substring(0, ind);
     var afterSymbol = textContent.substring(ind + 1, ind + 2); 
-    console.log(afterSymbol);
     var after = textContent.substring(ind + 2);
     if (letter == textContent[ind]){
       text.innerHTML = "<span style='color: green;'>" + before + "</span>" + 
@@ -36,3 +42,7 @@ document.addEventListener("keydown", function(event) {
     }
 }
 }); 
+
+function theme(){
+    document.documentElement.style.setProperty('--primary-opacity', '1');
+}
