@@ -6,7 +6,14 @@
     <link rel="manifest" href="manifest.json">
 </head>
 <body>
-    <button id="btn" onclick="theme()">Нажми меня</button>
+    <div class="container" onclick="theme()">
+        <label class="checkbox" for="checkbox">
+            <input class="checkbox__inp" type="checkbox" id="checkbox">
+            <span class="checkbox__inner">
+                Change theme
+            </span>
+        </label>
+    </div>
     <input id="inputForMobile">
     <div class="remainMobile">
         <div id="remainTimeMobile">
