@@ -1,12 +1,16 @@
+:root {
+  --primary-opacity: 0;
+}
 
-  html{
+
+body{
 
   background: linear-gradient(to right, hsl(224, 60%, 49%), hsl(9, 73%, 51%));
   height: 100%;
   width: 100%;
 } 
 
-html::before { 
+body::before { 
   position: absolute;
   content: "";
   top: 0;
@@ -20,11 +24,11 @@ html::before {
   );
   z-index: -1;
   transition: opacity 0.5s linear;
-  opacity: 0;
+  opacity: var(--primary-opacity);
 }
-html:hover::before {
+/* body::before {
   opacity: 1;
-}  
+}   */
 
 #rectangle{
   background-color: rgba(255, 255, 255, 0.45);
