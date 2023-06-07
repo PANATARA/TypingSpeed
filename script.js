@@ -1,13 +1,8 @@
-
-
 var text = document.getElementById('Text');
 var rectangle = document.getElementById('rectangle');
 var textContent = text.textContent;
+var remainAndSetting = document.getElementById('remainAndSetting');
 var ind = 0;
-
-function print(){
-    console.log(1234567);
-}
 
 
 function randomNum(min, max){
@@ -44,8 +39,26 @@ document.addEventListener("keydown", function(event) {
 }
 }); 
 
+var b = 2;
 function theme(){
-    document.documentElement.style.setProperty('--primary-opacity', '1');
-    rectangle.style.color = "#b6b39e";
-    rectangle.style.background = "#141414";
+    if (b % 2 == 0) {
+        document.documentElement.style.setProperty('--primary-opacity', '1');
+        rectangle.style.color = "#b6b39e";
+        rectangle.style.background = "rgba(20, 20, 20, 0.45)";
+        document.getElementById('colorMod').innerHTML = "Light Mod"
+        b++;
+    }else{
+        document.documentElement.style.setProperty('--primary-opacity', '0');
+        rectangle.style.color = "gray";
+        rectangle.style.background = "rgba(255, 255, 255, 0.45)";
+        document.getElementById('colorMod').innerHTML = "Dark Mod"
+        b++;
+    }
 }
+
+function cancelSpace(event) {
+    if (event.keyCode === 32) {
+      event.preventDefault();
+      return false;
+    }
+  }
