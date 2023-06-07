@@ -30,7 +30,7 @@ body::before {
 #rectangle{
   background-color: rgba(255, 255, 255, 0.45);
   border-radius: 45px;
-  color: gray;
+  color: rgba(14, 14, 14, 0.85);
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
@@ -56,7 +56,7 @@ padding-top: 7%;
 @media (min-height: 767px){
 #rectangle {
   width: 95%;
-  height: 50%;
+  height: 30%;
   position: absolute;
   top: 5%;
   left: 50%;
@@ -66,7 +66,7 @@ padding-top: 7%;
 }
 #inputForMobile{
   width: 95vw;
-  height: 50%;
+  height: 30%;
   position: absolute;
   top: 5%;
   left: 50%;
@@ -80,7 +80,7 @@ padding-top: 7%;
   display: flex;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   position: absolute;
-  top: 59%;
+  top: 45%;
   left: 45%;
   transform: translateX(-50%);
   font-size: 300%;
@@ -92,25 +92,22 @@ padding-top: 7%;
   display: none;
 } 
 .remainMobile{
-  display: flex;
+  display: flex ;
   padding-left: 0%;
   padding-top: 0%;
   padding-bottom: 0%;
   color: rgba(255, 255, 255, 0.71);
-  font-weight: 700;
-  font-size: 190%;
+  font-weight: 500;
+  font-size: 220%;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 #remainTimeMobile{
-  position: absolute;
-  left: 3%;
-}
-
-#remainSymboolMobile{
-  position: absolute;
-  right: 3%;
+  padding-right: 30px;
 }
 
 #divided{
@@ -352,7 +349,7 @@ padding-top: 7%;
 @media (min-height: 767px){
   .section{
     position: absolute;
-    top: 80%;
+    top: 70%;
     left: 50%;
     transform: translateX(-58%);
     display: flex;
@@ -390,53 +387,8 @@ padding-top: 7%;
   }
 }
 
-.item1 {
- background-color: rgba(221, 160, 221, 0.65);
- background-color: rgba(255, 255, 255, 0.25);
- 
-}
-
-.item2 {
-background-color: rgba(255, 250, 205, 0.65);
-background-color: rgba(255, 255, 255, 0.25);
-
-}
-
-.item3 {
-background-color: rgba(176, 224, 230, 0.65);
-background-color: rgba(255, 255, 255, 0.25);
-
-}
-
-.item4 {
-background-color: rgba(240, 128, 128, 0.65);
-background-color: rgba(255, 255, 255, 0.25);
-
-}
-
-.item5 {
-background-color: rgba(255, 192, 203, 0.65);
-background-color: rgba(255, 255, 255, 0.25);
-
-}
-
-.item6 {
-background-color: rgba(152, 251, 152, 0.65);
-background-color: rgba(255, 255, 255, 0.25);
-
-}
-
-.item7 {
-background-color: rgba(255, 250, 205, 0.65);
-background-color: rgba(255, 255, 255, 0.25);
-
-}
-
-.item8 {
-background-color: rgba(114, 172, 226, 0.65);
-background-color: rgba(255, 255, 255, 0.25);
-
-
+.section_item{
+  background-color: rgba(255, 255, 255, 0.15);
 }
 
 .section::-webkit-scrollbar {
@@ -450,22 +402,10 @@ background-color: transparent; /* Цвет ползунка скроллбара
 
 .container {
   max-width: 1200px;
-  padding: 0 15px;
+  padding: 0 0px;
   margin: 0 auto;
-}
-@media (min-height: 767px){
-  .container{
-    position: absolute;
-    right: 0%;
-    top: 60%;
-  }
-}
-
-@media (max-height: 768px){
-  .container{
-    position: absolute;
-    right: 0%;
-  }
+  position: absolute;
+  right: 0%;
 }
 
 .checkbox {
