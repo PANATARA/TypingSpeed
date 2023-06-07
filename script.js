@@ -45,13 +45,13 @@ function theme(){
         document.documentElement.style.setProperty('--primary-opacity', '1');
         rectangle.style.color = "#b6b39e";
         rectangle.style.background = "rgba(20, 20, 20, 0.45)";
-        document.getElementById('colorMod').innerHTML = "Light Mod"
+        document.getElementById('colorMod').innerHTML = "Light Mod";
         b++;
     }else{
         document.documentElement.style.setProperty('--primary-opacity', '0');
-        rectangle.style.color = "gray";
+        rectangle.style.color = "rgba(14, 14, 14, 0.85)";
         rectangle.style.background = "rgba(255, 255, 255, 0.45)";
-        document.getElementById('colorMod').innerHTML = "Dark Mod"
+        document.getElementById('colorMod').innerHTML = "Dark Mod";
         b++;
     }
 }
