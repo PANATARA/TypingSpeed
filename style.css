@@ -81,13 +81,16 @@ padding-top: 7%;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   position: absolute;
   top: 45%;
-  left: 45%;
+  left: 50%;
   transform: translateX(-50%);
   font-size: 300%;
-  font-weight: 500;
+  font-weight: 400;
   flex-direction: column;
-
 } 
+
+#table *{
+  padding-right: 60px;
+}
 .remain {
   display: none;
 } 
@@ -113,99 +116,7 @@ padding-top: 7%;
 #divided{
   display: none;
 }
-.setting * {
-  padding-bottom:2px;
-}
 
-.difficulty{
-  display: flex;
-  white-space: nowrap;
-}
-
-#difficultyValues{
-  display: flex;
-  padding-left: 3%;
-  padding-right: 0%;
-}
-
-#difficultyValues p {
-  margin-right: 0%;
-}
-#difficultyValues1 {
-  margin: 0%;
-  margin-left: 0%;
-}
-#difficultyValues2 {
-  margin: 0%;
-  margin-left: 40%;
-}
-#difficultyValues3 {
-  margin: 0%;
-  margin-left: 40%;
-}
-
-.NumberOfSymbol{
-  display: flex;
-}
-
-#NumberOfSymbolValues{
-  display: flex;
-  padding-left: 10%;
-  padding-right: 0%;
-}
-
-#NumberOfSymbolValues p {
-  margin: 0%;
-  margin-left: 0px;
-}
-
-.laguage{
-  display: flex;
-}
-
-#laguageValues{
-  display: flex;
-  padding-left: 31%;
-  padding-right: 0%;
-}
-
-#laguageValues p {
-  margin-right: 0%;
-}
-#laguageValuesRu {
-  margin: 0%;
-  margin-left: 0%;
-}
-#laguageValuesEn {
-  margin: 0%;
-  margin-left: 40%;
-}
-
-.time{
-  display: flex;
-}
-
-#timeValues{
-  display: flex;
-  padding-left: 24%;
-  padding-right: 0%;
-}
-
-#timeValues p {
-  margin-right: 0%;
-}
-#timeValues30 {
-  margin: 0%;
-  margin-left: 0%;
-}
-#timeValues60 {
-  margin: 0%;
-  margin-left: 15%;
-}
-#timeValues90 {
-  margin: 0%;
-  margin-left: 15%;
-}
 }
 /* DESKTOP DESKTOP DESKTOP DESKTOP DESKTOP DESKTOP DESKTOP DESKTOP DESKTOP DESKTOP */
 @media (max-height: 767px){
@@ -250,67 +161,7 @@ padding-top: 7%;
   border-radius: 15px;
   margin: 0%;
 }
-.setting * {
-  padding-bottom: 2px;
-  
-}
 
-.difficulty{
-  display: flex;
-  white-space: nowrap;
-}
-
-#difficultyValues{
-  display: flex;
-  padding-left: 0px;
-}
-
-#difficultyValues p {
-  margin: 0%;
-  margin-left: 18px;
-}
-
-.NumberOfSymbol{
-  display: flex;
-}
-
-#NumberOfSymbolValues{
-  display: flex;
-  padding-left: 35px;
-}
-
-#NumberOfSymbolValues p {
-  margin: 0%;
-  margin-left: 0px;
-}
-
-.laguage{
-  display: flex;
-}
-
-#laguageValues{
-  display: flex;
-  padding-left: 75px;
-}
-
-#laguageValues p {
-  margin: 0%;
-  margin-left: 10px;
-}
-
-.time{
-  display: flex;
-}
-
-#timeValues{
-  display: flex;
-  padding-left: 69px;
-}
-
-#timeValues p {
-  margin: 0%;
-  margin-left: 0px;
-}
 }
 @media (max-height: 767px){
 
@@ -337,14 +188,10 @@ padding-top: 7%;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     font-weight: 500;
     text-align: center;
-    border-radius: 10px; /* добавляем закругление углов */
-    margin-right: 20px; /* добавляем отступ справа */
+    border-radius: 10px;
+    margin-right: 20px;
     margin-bottom: 10px;
-    /* position: sticky;
-    top: 0%; */
   }
-
-
 }
 @media (min-height: 767px){
   .section{
@@ -353,13 +200,12 @@ padding-top: 7%;
     left: 50%;
     transform: translateX(-58%);
     display: flex;
-    flex-direction: row; /* Горизонтальная прокрутка */
-    overflow-x: auto; /* Включаем горизонтальную прокрутку */
-    overflow-y: hidden; /* Отключаем вертикальную прокрутку */
+    flex-direction: row;
+    overflow-x: auto;
+    overflow-y: hidden;
     height: 280px;
     width: 107%;
     margin: 0px 50px;
-    /* overflow: auto; */
   }
   .section_item {
     display: flex;
@@ -375,8 +221,6 @@ padding-top: 7%;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     font-weight: 500;
     text-align: center;
-    /* position: sticky;
-    left: 0%; */
   }
   .item8 {
     margin-right: 4%;
