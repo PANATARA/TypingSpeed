@@ -6,11 +6,11 @@
     <link rel="manifest" href="manifest.json">
 </head>
 <body>
-    <div class="container" onclick="theme()">
+    <div class="container">
         <label class="checkbox" for="checkbox">
-            <input class="checkbox__inp" type="checkbox" id="checkbox">
-            <span class="checkbox__inner">
-                Change theme
+            <input class="checkbox__inp" type="checkbox" id="checkbox" onclick="theme()" tabindex="-1" onkeydown="return cancelSpace(event)">
+            <span class="checkbox__inner" id="colorMod">
+                Dark mod
             </span>
         </label>
     </div>
