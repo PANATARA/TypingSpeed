@@ -87,10 +87,18 @@ padding-top: 7%;
   font-weight: 400;
   flex-direction: column;
 } 
-
-#table *{
-  padding-right: 60px;
+table{
+  text-align: left;
 }
+#table *{
+  padding-left: 70px;
+  padding-bottom: 30px;
+}
+
+td {
+
+  font-weight: 700;
+} 
 .remain {
   display: none;
 } 
@@ -171,7 +179,6 @@ padding-top: 7%;
     overflow-y: auto;
     height: 310px;
     width: 200px;
-    /* margin: 50px 50px; */
     overflow: auto;
     position: absolute;
     top: 29%;
@@ -214,8 +221,8 @@ padding-top: 7%;
     flex: 0 0 400px;
     height: 250px;
     font-size: 50px;
-    border-radius: 20px; /* добавляем закругление углов */
-    margin-right: 10px; /* добавляем отступ справа */
+    border-radius: 20px;
+    margin-right: 10px; 
     margin-left: 10px;
     margin-bottom: 0px;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
@@ -245,6 +252,71 @@ background-color: transparent; /* Цвет ползунка скроллбара
 }
 
 .container {
+  max-width: 1200px;
+  padding: 0 0px;
+  margin: 0 auto;
+  position: absolute;
+  right: 0%;
+}
+
+.checkbox {
+  display: inline-block;
+}
+
+.checkbox__inp {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+  appearance: none;
+}
+
+.checkbox__inner {
+  display: inline-block;
+  position: relative;
+  font-size: 30px;
+  padding: 8px;
+  padding-left: 104px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-weight: bold;
+  color: rgb(171, 171, 171);
+}
+
+.checkbox__inner:before {
+  display: block;
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 90px;
+  height: 54px;
+  border-radius: 27px;
+  background-color: white;
+  transition: background-color .3s;
+}
+
+.checkbox__inner::after {
+  display: block;
+  content: "";
+  position: absolute;
+  width: 45px;
+  height: 45px;
+  border-radius: 25px;
+  background-color: rgb(14, 14, 14);
+  left: 3px;
+  top: 4.5px;
+  transition: background-color .3s, left .3s;
+}
+
+.checkbox__inp:checked+.checkbox__inner::before {
+  background-color: rgb(14, 14, 14);
+}
+
+.checkbox__inp:checked+.checkbox__inner::after {
+  background-color: white;
+  left: 36px;
+}
+/* .container {
   max-width: 1200px;
   padding: 0 0px;
   margin: 0 auto;
@@ -308,4 +380,4 @@ background-color: transparent; /* Цвет ползунка скроллбара
 .checkbox__inp:checked+.checkbox__inner::after {
   background-color: white;
   left: 27px;
-}
+} */
