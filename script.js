@@ -61,4 +61,14 @@ function cancelSpace(event) {
       event.preventDefault();
       return false;
     }
-  }
+}
+
+const tds = document.getElementsByTagName('td');
+
+for (let i = 0; i < tds.length; i++) {
+  tds[i].addEventListener('click', function() {
+    var tdsText = tds[i].textContent;
+    tds[i].style.textDecoration = "underline";
+    tds[i].style.color = "rgba(20, 20, 20, 0.45)";
+  });
+}
