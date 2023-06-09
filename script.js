@@ -35,7 +35,7 @@ document.addEventListener("keydown", function(event) {
     if (letter == textContent[ind]){
       text.innerHTML = "<span style='color: green;'>" + before + "</span>" + 
       "<span style='color: green;'>" + letter + "</span>" + 
-      "<span style='text-decoration: underline; text-decoration-skip-ink: none; text-decoration-color: blue;'>" + 
+      "<span style='text-decoration: underline; text-decoration-skip-ink: none; text-decoration-color: white;'>" + 
       afterSymbol + "</span>" + after;
       ind++
     } else {
@@ -47,7 +47,7 @@ var b = 2;
 function theme(){
     if (b % 2 == 0) {
         document.documentElement.style.setProperty('--primary-opacity', '1');
-        rectangle.style.color = "#b6b39e";
+        rectangle.style.color = "#807f7e";
         rectangle.style.background = "rgba(0, 0, 0, 0.95)";
         document.getElementById('colorMod').innerHTML = "Light Mod";
         for (var i = 0; i < items.length; i++) {
@@ -81,6 +81,13 @@ for (let i = 0; i < tds.length; i++) {
   tds[i].addEventListener('click', function() {
     var tdsText = tds[i].textContent;
     tds[i].style.textDecoration = "underline";
-    tds[i].style.color = "rgba(20, 20, 20, 0.45)";
+    tds[i].style.color = "green";
+    if (i % 2 == 1){
+      tds[i - 1].style.textDecoration = "none";
+      tds[i - 1].style.color = "rgba(255, 255, 255, 1)";
+    }else{
+      tds[i + 1].style.textDecoration = "none";
+      tds[i + 1].style.color = "rgba(255, 255, 255, 1)";
+    }
   });
 }
