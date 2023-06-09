@@ -45,6 +45,10 @@ padding-right: 10px;
 margin-left: 10px;
 margin-right: 10px;
 color: rgba(255, 255, 255, 0.81);
+-webkit-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none
 
 }
 
@@ -73,6 +77,10 @@ padding-top: 7%;
   transform: translateX(-50%);
   z-index: 1;
   opacity: 0;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none
 }
 .remainAndSetting{
   display: flex;
@@ -127,7 +135,7 @@ td {
 
 }
 /* DESKTOP DESKTOP DESKTOP DESKTOP DESKTOP DESKTOP DESKTOP DESKTOP DESKTOP DESKTOP */
-@media (max-height: 767px){
+@media (max-height: 768px){
 #rectangle {
   width: 60%;
   height: 55%;
@@ -136,6 +144,7 @@ td {
   left: 50%;
   transform: translateX(-50%);
   font-size: 1.6vw;
+  
 }
 
 #inputForMobile{
@@ -152,7 +161,6 @@ td {
   font-size: 150%;
   font-weight: 500;
   white-space: nowrap;
-
 }
 .remain{
   padding-top: 3%;
@@ -250,7 +258,7 @@ background-color: transparent; /* Цвет фона скроллбара */
 .section::-webkit-scrollbar-thumb {
 background-color: transparent; /* Цвет ползунка скроллбара */
 }
-
+/* Toggle switch for apperance */
 .container {
   max-width: 1200px;
   padding: 0 0px;
@@ -274,9 +282,7 @@ background-color: transparent; /* Цвет ползунка скроллбара
 .checkbox__inner {
   display: inline-block;
   position: relative;
-  font-size: 30px;
-  padding: 8px;
-  padding-left: 104px;
+  padding: 5px;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-weight: bold;
   color: rgb(171, 171, 171);
@@ -288,9 +294,6 @@ background-color: transparent; /* Цвет ползунка скроллбара
   position: absolute;
   left: 0;
   top: 0;
-  width: 90px;
-  height: 54px;
-  border-radius: 27px;
   background-color: white;
   transition: background-color .3s;
 }
@@ -299,12 +302,8 @@ background-color: transparent; /* Цвет ползунка скроллбара
   display: block;
   content: "";
   position: absolute;
-  width: 45px;
-  height: 45px;
-  border-radius: 25px;
   background-color: rgb(14, 14, 14);
   left: 3px;
-  top: 4.5px;
   transition: background-color .3s, left .3s;
 }
 
@@ -314,70 +313,46 @@ background-color: transparent; /* Цвет ползунка скроллбара
 
 .checkbox__inp:checked+.checkbox__inner::after {
   background-color: white;
-  left: 36px;
-}
-/* .container {
-  max-width: 1200px;
-  padding: 0 0px;
-  margin: 0 auto;
-  position: absolute;
-  right: 0%;
 }
 
-.checkbox {
-  display: inline-block;
+@media (max-height: 768px){
+  .checkbox__inner {
+    font-size: 20px;
+    padding-left: 74px;
+  }
+  .checkbox__inner:before {
+    width: 60px;
+    height: 36px;
+    border-radius: 18px;
+  }
+  .checkbox__inner::after {
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+    top: 3px;
+  }
+  .checkbox__inp:checked+.checkbox__inner::after {
+    left: 27px;
+  }
 }
 
-.checkbox__inp {
-  position: absolute;
-  opacity: 0;
-  width: 0;
-  height: 0;
-  appearance: none;
+@media (min-height: 767px){
+  .checkbox__inner {
+    font-size: 30px;
+    padding-left: 104px;
+  }
+  .checkbox__inner:before {
+    width: 90px;
+    height: 54px;
+    border-radius: 27px;
+  }
+  .checkbox__inner::after {
+    width: 45px;
+    height: 45px;
+    border-radius: 25px;
+    top: 4.5px;
+  }
+  .checkbox__inp:checked+.checkbox__inner::after {
+    left: 36px;
+  }
 }
-
-.checkbox__inner {
-  display: inline-block;
-  position: relative;
-  font-size: 20px;
-  padding: 8px;
-  padding-left: 74px;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  font-weight: bold;
-  color: rgb(171, 171, 171);
-}
-
-.checkbox__inner:before {
-  display: block;
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 60px;
-  height: 36px;
-  border-radius: 18px;
-  background-color: white;
-  transition: background-color .3s;
-}
-
-.checkbox__inner::after {
-  display: block;
-  content: "";
-  position: absolute;
-  width: 30px;
-  height: 30px;
-  border-radius: 15px;
-  background-color: rgb(14, 14, 14);
-  left: 3px;
-  top: 3px;
-  transition: background-color .3s, left .3s;
-}
-
-.checkbox__inp:checked+.checkbox__inner::before {
-  background-color: rgb(14, 14, 14);
-}
-
-.checkbox__inp:checked+.checkbox__inner::after {
-  background-color: white;
-  left: 27px;
-} */
