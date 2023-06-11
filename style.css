@@ -6,6 +6,7 @@
 body{
   background: linear-gradient(to right, hsl(224, 72%, 30%), hsl(9, 76%, 36%));
   height: 100%;
+  width: 100%;
 } 
 
 body::before { 
