@@ -6,7 +6,6 @@
 body{
   background: linear-gradient(to right, hsl(224, 72%, 30%), hsl(9, 76%, 36%));
   height: 100%;
-  width: 100%;
 } 
 
 body::before { 
@@ -41,15 +40,15 @@ body::before {
 }
 
 .remainAndSetting *{
-  padding-left: 0px;
-  padding-right: 0px;
-  margin-left: 0px;
-  margin-right: 0px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
   color: rgba(255, 255, 255, 0.81);
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
-  user-select: none
+  user-select: none;
 }
 
 #remainSymbool{
@@ -82,14 +81,14 @@ body::before {
   user-select: none
 }
 .remainAndSetting{
-  display: flex;
+  /* display: flex;
   white-space: nowrap;
-  display: flex;
+  display: flex; */
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   position: absolute;
   top: 35%;
-  left: 10%;
-  transform: translateX(-50%);
+  left: 50%;
+  transform: translateX(-50%); 
   font-size: 300%;
   font-weight: 400;
   flex-direction: column;
@@ -101,7 +100,7 @@ table{
 
 .tableremain{
   font-size: 70%;
-  table-layout: fixed;
+  table-layout: auto;
 }
 .tableremain tr{
   display: inline-block;
