@@ -100,7 +100,7 @@ table{
 
 .tableremain{
   font-size: 70%;
-  /* table-layout: fixed; */
+  table-layout: fixed;
 }
 .tableremain tr{
   display: inline-block;
