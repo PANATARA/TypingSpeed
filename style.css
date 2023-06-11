@@ -40,10 +40,10 @@ body::before {
 }
 
 .remainAndSetting *{
-  padding-left: 10px;
-  padding-right: 10px;
-  margin-left: 10px;
-  margin-right: 10px;
+  padding-left: 0px;
+  padding-right: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
   color: rgba(255, 255, 255, 0.81);
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -88,7 +88,7 @@ body::before {
   position: absolute;
   top: 35%;
   left: 10%;
-  /* transform: translateX(-50%); */
+  transform: translateX(-50%);
   font-size: 300%;
   font-weight: 400;
   flex-direction: column;
@@ -106,7 +106,7 @@ table{
   display: inline-block;
 }
 #remainSymbool{
-  padding: 0%;
+  padding: 0;
 }
 #table *{
   padding-left: 70px;
