@@ -86,7 +86,7 @@ body::before {
   display: flex;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   position: absolute;
-  top: 45%;
+  top: 35%;
   left: 50%;
   transform: translateX(-50%);
   font-size: 300%;
@@ -95,6 +95,18 @@ body::before {
 } 
 table{
   text-align: left;
+  padding-bottom: 100px;
+}
+
+.tableremain{
+  font-size: 70%;
+  /* table-layout: fixed; */
+}
+.tableremain tr{
+  display: inline-block;
+}
+#remainSymbool{
+  padding-top: 0%;
 }
 #table *{
   padding-left: 70px;
@@ -159,10 +171,7 @@ td {
   font-weight: 500;
   white-space: nowrap;
 }
-.remain{
-  padding-top: 3%;
-  margin: 0%;
-}
+
 .remainMobile{
   display: none;
 }
@@ -182,11 +191,11 @@ td {
     display: flex;
     flex-direction: column;
     overflow-y: auto;
-    height: 310px;
+    height: 710px;
     width: 200px;
     overflow: auto;
     position: absolute;
-    top: 29%;
+    top: 59%;
     transform: translateY(-50%);
     margin-left: 0%;
     }
@@ -196,7 +205,7 @@ td {
     align-items: center;
     flex: 0 0 150px;
     height: 200px;
-    font-size: 1.59dvw;
+    font-size: 1.59vw;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     font-weight: 500;
     text-align: center;
@@ -263,11 +272,11 @@ background-color: transparent; /* Цвет ползунка скроллбара
   padding: 0 0px;
   margin: 0 auto;
   position: absolute;
-  right: 0%;
+  right: 5%;
 }
 
 .checkbox {
-  display: inline-block;
+  display: block;
 }
 
 .checkbox__inp {
@@ -279,7 +288,7 @@ background-color: transparent; /* Цвет ползунка скроллбара
 }
 
 .checkbox__inner {
-  display: inline-block;
+  display: block;
   position: relative;
   padding: 5px;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
