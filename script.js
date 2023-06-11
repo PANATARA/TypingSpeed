@@ -102,10 +102,10 @@ function Hints(selectedTime){
     isFunctionExecuted = true;
     var time = selectedTime;
     setInterval(function() {
-      document.getElementById('remainTimeNum').innerHTML = time - 1;
+      document.getElementById('remainTimeNum').textContent = time - 1;
       time = time- 1;
-      document.getElementById('remainSymboolNum').innerHTML = textContent.length - ind;
-      document.getElementById('remainSymboolSpeedNum').innerHTML = Math.round((ind / (60 - time))*60);
+      document.getElementById('remainSymboolNum').textContent = textContent.length - ind;
+      document.getElementById('remainSymboolSpeedNum').textContent = Math.round((ind / (60 - time))*60);
     }, 1000);
   }
 }
