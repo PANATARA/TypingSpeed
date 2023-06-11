@@ -15,14 +15,6 @@
         </label>
     </div>
     <input id="inputForMobile">
-    <div class="remainMobile">
-        <div id="remainTimeMobile">
-            Time: 34s
-        </div>
-        <div id="remainSymboolMobile">
-            Symbols: 76
-        </div>
-    </div>
     <div class="textRectangle" id="rectangle">
         <div id="Text">Кошка это домашнее животное, одно из наиболее популярных 
             «животных-компаньонов». С точки зрения научной систематики, домашняя 
@@ -31,17 +23,20 @@
             другие — как отдельный биологический вид.</div>
     </div>
     <div class="remainAndSetting">
-        <div class="remain">
-            <div id="remainTime">
-                Time: 34s
-            </div>
-            <div id="remainSymbool">
-                Symbols: 76
-            </div>
-            <div id="remainSymboolSpeed">
-                Char/min: 109
-            </div>
-        </div>
+        <table class="tableremain">
+            <tr id="remainTime">
+              <th>Time:</th>
+              <td id="remainTimeNum">60</td>
+            </tr>
+            <tr id="remainSymbool">
+              <th>Symbols:</th>
+              <td id="remainSymboolNum">251</td>
+            </tr>
+            <tr id="remainSymboolSpeed">
+              <th>Char/min:</th>
+              <td id="remainSymboolSpeedNum">0</td>
+            </tr>
+        </table>
         <div id="divided">
 
         </div>
@@ -49,25 +44,25 @@
             <table id="table">
                 <tr>
                   <th>Difficulty</th>
-                  <td>Easy</td>
-                  <td>Hard</td>
+                  <td class="set">Easy</td>
+                  <td class="set">Hard</td>
                 </tr>
                 <tr>
                   <th>Symbols</th>
-                  <td>Many</td>
-                  <td>Few</td>
+                  <td class="set">Many</td>
+                  <td class="set">Few</td>
                 </tr>
                 <tr>
                   <th>Language</th>
-                  <td>Ru</td>
-                  <td>En</td>
+                  <td class="set">Ru</td>
+                  <td class="set">En</td>
                 </tr>
                 <tr>
                   <th>Time</th>
-                  <td>30</td>
-                  <td>60</td>
+                  <td class="set">30</td>
+                  <td class="set">60</td>
                 </tr>
-              </table>
+            </table>
         </div>
     </div>
     
