@@ -6,7 +6,6 @@
 body{
   background: linear-gradient(to right, hsl(224, 72%, 30%), hsl(9, 76%, 36%));
   height: 100%;
-  width: 100%;
 } 
 
 body::before { 
@@ -341,4 +340,21 @@ background-color: transparent; /* Цвет ползунка скроллбара
   .checkbox__inp:checked+.checkbox__inner::after {
     left: 36px;
   }
+}
+
+
+
+
+
+
+@media only screen and (max-width: 600px) {
+  /* стили для телефонов и планшетов */
+}
+
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+  /* стили для планшетов и небольших десктопов */
+}
+
+@media only screen and (min-width: 1025px) {
+  /* стили для больших десктопов */
 }
