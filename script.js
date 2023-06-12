@@ -5,6 +5,7 @@ var remainAndSetting = document.getElementById('remainAndSetting');
 var ind = 0;
 const items = document.querySelectorAll('.section_item');
 let isFunctionExecuted = false;
+var errorYesNum;
 
 function randomNum(min, max){
     return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -23,31 +24,53 @@ function changeText(Number){
     .catch(error => console.error(error));
     ind = 0;
 }
-
-
+var erorrArr = [];
+var correctArr = [];
 document.addEventListener("keydown", function(event) {
-    var letterPattern = /^[a-zA-Zа-яА-Я-" "-,]$/;
-    if (letterPattern.test(event.key)) {
-    textContent = document.getElementById('Text').textContent;
-    var letter = event.key;
-    var before = textContent.substring(0, ind);
-    var afterSymbol = textContent.substring(ind + 1, ind + 2); 
-    var after = textContent.substring(ind + 2);
-    Hints(60);
-    if (ind == textContent.length - 1){
-      console.log(1234);
+  var letterPattern = /^[a-zA-Zа-яА-Я-" "-,]$/;
+  if (letterPattern.test(event.key)) {
+  textContent = document.getElementById('Text').textContent;
+  var before = textContent.substring(0, ind);
+  var coloredBefore = '';
+  for (var i = 0; i < before.length; i++) {
+    if (erorrArr.includes(i)) {
+      coloredBefore += '<span style="color: red">' + before[i] + '</span>';
+    }else if (correctArr.includes(i)) {
+      coloredBefore += '<span style="color: green">' + before[i] + '</span>';
     }
-    if (letter == textContent[ind]){
-      text.innerHTML = "<span style='color: green;'>" + before + "</span>" + 
-      "<span style='color: green;'>" + letter + "</span>" + 
+  }
+  var afterSymbol = textContent.substring(ind + 1, ind + 2); 
+  var after = textContent.substring(ind + 2);
+  Hints(60);
+  if (ind == textContent.length - 1){
+    console.log(1234);
+  }
+  if (event.key == textContent[ind]){
+    correctArr.push(ind);
+    text.innerHTML = coloredBefore + 
+    "<span style='color: green;'>" + textContent[ind] + "</span>" + 
+    "<span style='text-decoration: underline; text-decoration-skip-ink: none; text-decoration-color: white;'>" + 
+    afterSymbol + "</span>" + 
+    after;
+    ind++
+  } else {
+      text.innerHTML = coloredBefore + "<span style='color: red;'>" + textContent[ind] + "</span>" + 
       "<span style='text-decoration: underline; text-decoration-skip-ink: none; text-decoration-color: white;'>" + 
-      afterSymbol + "</span>" + after;
-      ind++
-    } else {
-        text.innerHTML = "<span style='color: green;'>" + before + "</span>" + "<span style='color: red;'>" + textContent[ind] + "</span>" + afterSymbol +  after;
-    }
+      afterSymbol + "</span>" 
+      +  after;
+      if (errorYesNum == 1){erorrArr.push(ind);ind++;}
+  }
 }
 }); 
+
+function errorYes(){
+  errorYesNum = 1;
+}
+
+function errorNo(){
+  errorYesNum = 0;
+}
+
 var b = 2;
 function theme(){
     if (b % 2 == 0) {
