@@ -307,11 +307,11 @@ body::before {
     display: flex;
     flex-direction: column;
     overflow-y: auto;
-    height: 710px;
+    height: 510px;
     width: 200px;
     overflow: auto;
     position: absolute;
-    top: 59%;
+    top: 50%;
     transform: translateY(-50%);
     margin-left: 0%;
     }
