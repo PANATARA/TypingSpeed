@@ -128,7 +128,7 @@ body::before {
   /* стили для телефонов и планшетов */
 }
 
-@media only screen and (min-width: 301px) and (max-width: 1023px)  { /* MOBILE */
+@media (min-height: 767px){
   #rectangle {
     width: 95%;
     height: 30%;
@@ -247,7 +247,7 @@ body::before {
   }
 }
 
-@media only screen and (min-width: 1024px)  {  /* DESKTOP */
+@media (max-height: 768px){
   #rectangle {
     width: 60%;
     height: 55%;
