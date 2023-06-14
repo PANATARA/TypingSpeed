@@ -11,17 +11,13 @@
         <label class="checkbox" for="checkbox">
             <input class="checkbox__inp" type="checkbox" id="checkbox" onclick="theme()" tabindex="-1" onkeydown="return cancelSpace(event)">
             <span class="checkbox__inner" id="colorMod">
-                Dark mod
+              Appearance
             </span>
         </label>
     </div>
     <input id="inputForMobile">
     <div class="textRectangle" id="rectangle">
-        <div id="Text">Кошка это домашнее животное, одно из наиболее популярных 
-            «животных-компаньонов». С точки зрения научной систематики, домашняя 
-            кошка — млекопитающее семейства кошачьих отряда хищных. Одни 
-            исследователи рассматривают домашнюю кошку как подвид дикой кошки, 
-            другие — как отдельный биологический вид.</div>
+        <div id="Text">Cats are one of the most popular domestic pets. They can come in different breeds, sizes, and colors, but they all share common personality traits. Cats are very curious, playful, and independent. They can spend hours observing the world around them and then suddenly start playing with a small toy or jump on the table to steal a piece of food.</div>
     </div>
     <div class="remainAndSetting">
         <table class="tableremain">
@@ -46,22 +42,22 @@
                 <tr>
                   <th>Error skipping</th>
                   <td onclick="errorYes()">Yes</td>
-                  <td onclick="errorNo()">No</td>
+                  <td onclick="errorNo()" style="text-Decoration:underline; color: green;">No</td>
                 </tr>
                 <tr>
                   <th>Symbols</th>
                   <td>Few</td>
-                  <td>Many</td>
+                  <td style="text-Decoration:underline; color: green;">Many</td>
                 </tr>
                 <tr>
                   <th>Language</th>
-                  <td>Ru</td>
-                  <td>En</td>
+                  <td onclick="languageRU()">Ru</td>
+                  <td onclick="languageEN()" style="text-Decoration:underline; color: green;">En</td>
                 </tr>
                 <tr>
                   <th>Time</th>
-                  <td>30</td>
-                  <td>60</td>
+                  <td onclick="time30()">30</td>
+                  <td style="text-Decoration:underline; color: green;" onclick="time60()">60</td>
                 </tr>
             </table>
         </div>
