@@ -8,6 +8,7 @@ let isFunctionExecuted = false;
 var errorYesNum;
 var language = "EN";
 var timeValue = 60;
+var countSymbol = "LONG";
 
 function time60(){timeValue=60;document.getElementById('remainTimeNum').textContent = timeValue;}
 function time30(){timeValue=30;document.getElementById('remainTimeNum').textContent = timeValue;}
@@ -18,7 +19,8 @@ function randomNum(min, max){
 
 function languageRU(){language = "RU"}
 function languageEN(){language = "EN"}
-
+function funcFew(){countSymbol = "SHORT"}
+function funcMany(){countSymbol = "LONG"}
 
 function changeText(Number){
   document.addEventListener('keydown', function(event) {
@@ -26,7 +28,7 @@ function changeText(Number){
       event.preventDefault();
 }
   });
-    var textNow = "text" + randomNum(1,4) + language;
+    var textNow = "text" + randomNum(1,4) + language + countSymbol;
     fetch('Texts.json')
     .then(response => response.json())
     .then(data => {document.getElementById('Text').textContent = data[Number][textNow]})
@@ -36,7 +38,7 @@ function changeText(Number){
 var erorrArr = [];
 var correctArr = [];
 document.addEventListener("keydown", function(event) {
-  var letterPattern = /^[a-zA-Zа-яА-Я-" "-,]$/;
+  var letterPattern = /^[a-zA-Zа-яА-Я-" "-,-.]$/;
   if (letterPattern.test(event.key)) {
   textContent = document.getElementById('Text').textContent;
   var before = textContent.substring(0, ind);
@@ -52,7 +54,11 @@ document.addEventListener("keydown", function(event) {
   var after = textContent.substring(ind + 2);
   Hints(timeValue);
   if (ind == textContent.length - 1){
-    console.log(1234);
+    text.style.display = "none";
+    document.getElementById('resultBoxid').style.display = "block";
+    rectangle.style.height = "90%";
+    document.getElementById('RAS').style.display = "none";
+    
   }
   if (event.key == textContent[ind]){
     correctArr.push(ind);
@@ -138,6 +144,12 @@ function Hints(selectedTime){
       time = time- 1;
       document.getElementById('remainSymboolNum').textContent = textContent.length - ind;
       document.getElementById('remainSymboolSpeedNum').textContent = Math.round((ind / (60 - time))*60);
+      if (time == 0){
+        text.style.display = "none";
+        document.getElementById('resultBoxid').style.display = "block";
+        rectangle.style.height = "90%";
+        document.getElementById('RAS').style.display = "none";
+      }
     }, 1000);
   }
 }
