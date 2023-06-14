@@ -6,21 +6,10 @@ var ind = 0;
 const items = document.querySelectorAll('.section_item');
 let isFunctionExecuted = false;
 var errorYesNum;
-var language = "EN";
-var timeValue = 60;
-var countSymbol = "LONG";
-
-function time60(){timeValue=60;document.getElementById('remainTimeNum').textContent = timeValue;}
-function time30(){timeValue=30;document.getElementById('remainTimeNum').textContent = timeValue;}
 
 function randomNum(min, max){
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
-
-function languageRU(){language = "RU"}
-function languageEN(){language = "EN"}
-function funcFew(){countSymbol = "SHORT"}
-function funcMany(){countSymbol = "LONG"}
 
 function changeText(Number){
   document.addEventListener('keydown', function(event) {
@@ -28,7 +17,7 @@ function changeText(Number){
       event.preventDefault();
 }
   });
-    var textNow = "text" + randomNum(1,4) + language + countSymbol;
+    var textNow = "text" + randomNum(1,2);
     fetch('Texts.json')
     .then(response => response.json())
     .then(data => {document.getElementById('Text').textContent = data[Number][textNow]})
@@ -38,7 +27,7 @@ function changeText(Number){
 var erorrArr = [];
 var correctArr = [];
 document.addEventListener("keydown", function(event) {
-  var letterPattern = /^[a-zA-Zа-яА-Я-" "-,-.]$/;
+  var letterPattern = /^[a-zA-Zа-яА-Я-" "-,]$/;
   if (letterPattern.test(event.key)) {
   textContent = document.getElementById('Text').textContent;
   var before = textContent.substring(0, ind);
@@ -52,8 +41,10 @@ document.addEventListener("keydown", function(event) {
   }
   var afterSymbol = textContent.substring(ind + 1, ind + 2); 
   var after = textContent.substring(ind + 2);
-  Hints(timeValue);
-
+  Hints(60);
+  if (ind == textContent.length - 1){
+    console.log(1234);
+  }
   if (event.key == textContent[ind]){
     correctArr.push(ind);
     text.innerHTML = coloredBefore + 
@@ -85,18 +76,18 @@ function theme(){
     if (b % 2 == 0) {
         document.documentElement.style.setProperty('--primary-opacity', '1');
         rectangle.style.color = "#807f7e";
-        rectangle.style.background = "rgba(28, 28, 30, 1)";
-        document.getElementById('colorMod').innerHTML = "Appearance";
+        rectangle.style.background = "rgba(0, 0, 0, 0.95)";
+        document.getElementById('colorMod').innerHTML = "Light Mod";
         for (var i = 0; i < items.length; i++) {
-          items[i].style.backgroundColor = "rgba(28, 28, 30, 1)"; 
+          items[i].style.backgroundColor = "rgba(0, 0, 0, 0.95)"; 
           items[i].style.color = "rgba(255,255,255)";
         } 
         b++;
     }else{
         document.documentElement.style.setProperty('--primary-opacity', '0');
-        rectangle.style.color = "rgba(54, 54, 54, 0.85)";
+        rectangle.style.color = "rgba(14, 14, 14, 0.85)";
         rectangle.style.backgroundColor = "rgba(255, 255, 255, 0.45)";
-        document.getElementById('colorMod').innerHTML = "Appearance";
+        document.getElementById('colorMod').innerHTML = "Dark Mod";
         for (var i = 0; i < items.length; i++) {
           items[i].style.backgroundColor = "rgba(255, 255, 255, 0.15)"; 
           items[i].style.color = "rgba(0,0,0)"; 
