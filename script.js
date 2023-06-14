@@ -1,341 +1,155 @@
-:root {
-  --primary-opacity: 0;
+var text = document.getElementById('Text');
+var rectangle = document.getElementById('rectangle');
+var textContent = text.textContent;
+var remainAndSetting = document.getElementById('remainAndSetting');
+var ind = 0;
+const items = document.querySelectorAll('.section_item');
+let isFunctionExecuted = false;
+var errorYesNum;
+var language = "EN";
+var timeValue = 60;
+var countSymbol = "LONG";
+
+function time60(){timeValue=60;document.getElementById('remainTimeNum').textContent = timeValue;}
+function time30(){timeValue=30;document.getElementById('remainTimeNum').textContent = timeValue;}
+
+function randomNum(min, max){
+    return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-body{
-  background: linear-gradient(to right, hsl(224, 72%, 30%), hsl(9, 76%, 36%));
-  height: 100%;
-} 
+function languageRU(){language = "RU"}
+function languageEN(){language = "EN"}
+function funcFew(){countSymbol = "SHORT"}
+function funcMany(){countSymbol = "LONG"}
 
-body::before { 
-  position: absolute;
-  content: "";
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background-image: linear-gradient(
-    to right,
-    hsl(10, 71%, 16%),
-    hsl(225, 76%, 15%)
-  );
-  z-index: -1;
-  transition: opacity 0.5s linear;
-  opacity: var(--primary-opacity);
+function changeText(Number){
+  document.addEventListener('keydown', function(event) {
+    if (event.keyCode === 32) {
+      event.preventDefault();
 }
-
-#rectangle{
-  background-color: rgba(255, 255, 255, 0.45);
-  border-radius: 45px;
-  color: rgba(54, 54, 54, 0.85);
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  transition: 1s;
-  box-shadow: 0 0 20px rgba(0,0,0,0.6);
+  });
+    var textNow = "text" + randomNum(1,4) + language + countSymbol;
+    fetch('Texts.json')
+    .then(response => response.json())
+    .then(data => {document.getElementById('Text').textContent = data[Number][textNow]})
+    .catch(error => console.error(error));
+    ind = 0;
 }
-
-#Text{
-  margin: 4%;
-  font-weight: 500;
-}
-
-.remainAndSetting *{
-  padding-left: 10px;
-  padding-right: 10px;
-  margin-left: 10px;
-  margin-right: 10px;
-  color: rgba(255, 255, 255, 0.81);
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
-#remainSymbool{
-  padding-top: 7%;
-}
-
-
-.section_item{
-  background-color: rgba(255, 255, 255, 0.15);
-  box-shadow: 0 0 10px rgba(26, 25, 25, 0.6);
-}
-
-.section_item:hover{
-  transform: scale(0.9);
-  transition-duration: 0.3s;
-  box-shadow: none;
-}
-
-.section::-webkit-scrollbar {
-  width: 0.5em; /* Ширина скроллбара */
-  background-color: transparent; /* Цвет фона скроллбара */
-}
-
-.section::-webkit-scrollbar-thumb {
-  background-color: transparent; /* Цвет ползунка скроллбара */
-}
-/* Toggle switch for apperance */
-.container {
-  max-width: 1200px;
-  padding: 0 0px;
-  margin: 0 auto;
-  position: absolute;
-  right: 5%;
-}
-
-.checkbox {
-  display: block;
-}
-
-.checkbox__inp {
-  position: absolute;
-  opacity: 0;
-  width: 0;
-  height: 0;
-  appearance: none;
-}
-
-.checkbox__inner {
-  display: block;
-  position: relative;
-  padding: 5px;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  font-weight: bold;
-  color: rgb(171, 171, 171);
-}
-
-.checkbox__inner:before {
-  display: block;
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  background-color: white;
-  transition: background-color .3s;
-}
-
-.checkbox__inner::after {
-  display: block;
-  content: "";
-  position: absolute;
-  background-color: rgb(14, 14, 14);
-  left: 3px;
-  transition: background-color .3s, left .3s;
-}
-
-.checkbox__inp:checked+.checkbox__inner::before {
-  background-color: rgb(14, 14, 14);
-}
-
-.checkbox__inp:checked+.checkbox__inner::after {
-  background-color: white;
-}
-
-
-@media only screen and (max-width: 600px) {
-  /* стили для телефонов и планшетов */
-}
-
-@media (min-height: 1023px){
-  #rectangle {
-    width: 95%;
-    height: 30%;
-    position: absolute;
-    top: 5%;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 3.8vw;
-  }
-  #inputForMobile{
-    width: 95vw;
-    height: 30%;
-    position: absolute;
-    top: 5%;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 1;
-    opacity: 0;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none
-  }
-  .remainAndSetting{
-    display: block;
-    white-space: nowrap;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-    position: absolute;
-    top: 35%;
-    left: 50%;
-    transform: translateX(-50%); 
-    font-size: 300%;
-    font-weight: 400;
-    flex-direction: column;
-  } 
-  table{
-    text-align: left;
-    padding-bottom: 100px;
-  }
-  
-  .tableremain{
-    font-size: 70%;
-    table-layout: auto;
-  }
-  .tableremain tr{
-    display: inline-block;
-  }
-  #remainSymbool{
-    padding: 0;
-  }
-  #table *{
-    padding-left: 70px;
-    padding-bottom: 30px;
-  }
-  
-  td {
-    font-weight: 700;
-  } 
-  
-  #divided{
-    display: none;
-  }
-  .checkbox__inner {
-    font-size: 30px;
-    padding-left: 104px;
-  }
-  .checkbox__inner:before {
-    width: 90px;
-    height: 54px;
-    border-radius: 27px;
-  }
-  .checkbox__inner::after {
-    width: 45px;
-    height: 45px;
-    border-radius: 25px;
-    top: 4.5px;
-  }
-  .checkbox__inp:checked+.checkbox__inner::after {
-    left: 36px;
-  }
-  .section{
-    position: absolute;
-    top: 70%;
-    left: 50%;
-    transform: translateX(-58%);
-    display: flex;
-    flex-direction: row;
-    overflow-x: auto;
-    overflow-y: hidden;
-    height: 280px;
-    width: 107%;
-    margin: 0px 50px;
-  }
-  .section_item {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex: 0 0 400px;
-    height: 250px;
-    font-size: 50px;
-    border-radius: 20px;
-    margin-right: 10px; 
-    margin-left: 10px;
-    margin-bottom: 0px;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-    font-weight: 500;
-    text-align: center;
-    transition: 1s;
-  }
-  .item8 {
-    margin-right: 4%;
-
-  }
-  .item1 {
-    margin-left: 10%;
-  }
-}
-
-@media (max-height: 1024px){
-  #rectangle {
-    width: 60%;
-    height: 55%;
-    position: absolute;
-    top: 5%;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 1.6vw;
-}
-  
-  #inputForMobile{
-    display: none;
-  }
-  
-  .remainAndSetting{
-    display: flex;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-    position: absolute;
-    top: 65%;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 150%;
-    font-weight: 500;
-    white-space: nowrap;
-  }
-  
-  .remainMobile{
-    display: none;
-  }
-  #divided{
-    height: 155px;
-    width: 5px;
-    background-color: rgba(255, 255, 255, 0.45);
-    padding: 0;
-    border-radius: 15px;
-    margin: 0%;
-  }
-  .checkbox__inner {
-    font-size: 20px;
-    padding-left: 74px;
-  }
-  .checkbox__inner:before {
-    width: 60px;
-    height: 36px;
-    border-radius: 18px;
-  }
-  .checkbox__inner::after {
-    width: 30px;
-    height: 30px;
-    border-radius: 15px;
-    top: 3px;
-  }
-  .checkbox__inp:checked+.checkbox__inner::after {
-    left: 27px;
-  }
-  .section {
-    display: flex;
-    flex-direction: column;
-    overflow-y: auto;
-    height: 510px;
-    width: 200px;
-    overflow: auto;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    margin-left: 0%;
+var erorrArr = [];
+var correctArr = [];
+document.addEventListener("keydown", function(event) {
+  var letterPattern = /^[a-zA-Zа-яА-Я-" "-,-.]$/;
+  if (letterPattern.test(event.key)) {
+  textContent = document.getElementById('Text').textContent;
+  var before = textContent.substring(0, ind);
+  var coloredBefore = '';
+  for (var i = 0; i < before.length; i++) {
+    if (erorrArr.includes(i)) {
+      coloredBefore += '<span style="color: red">' + before[i] + '</span>';
+    }else if (correctArr.includes(i)) {
+      coloredBefore += '<span style="color: green">' + before[i] + '</span>';
     }
-    .section_item {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex: 0 0 150px;
-    height: 200px;
-    font-size: 1.59vw;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-    font-weight: 500;
-    text-align: center;
-    border-radius: 10px;
-    margin-right: 20px;
-    margin-bottom: 10px;
-    transition: 1s;
+  }
+  var afterSymbol = textContent.substring(ind + 1, ind + 2); 
+  var after = textContent.substring(ind + 2);
+  Hints(timeValue);
+  if (ind == textContent.length - 1){
+    text.style.display = "none";
+    document.getElementById('resultBoxid').style.display = "block";
+    rectangle.style.height = "90%";
+    document.getElementById('RAS').style.display = "none";
+    
+  }
+  if (event.key == textContent[ind]){
+    correctArr.push(ind);
+    text.innerHTML = coloredBefore + 
+    "<span style='color: green;'>" + textContent[ind] + "</span>" + 
+    "<span style='text-decoration: underline; text-decoration-skip-ink: none; text-decoration-color: white;'>" + 
+    afterSymbol + "</span>" + 
+    after;
+    ind++
+  } else {
+      text.innerHTML = coloredBefore + "<span style='color: red;'>" + textContent[ind] + "</span>" + 
+      "<span style='text-decoration: underline; text-decoration-skip-ink: none; text-decoration-color: white;'>" + 
+      afterSymbol + "</span>" 
+      +  after;
+      if (errorYesNum == 1){erorrArr.push(ind);ind++;}
+  }
+}
+}); 
+
+function errorYes(){
+  errorYesNum = 1;
+}
+
+function errorNo(){
+  errorYesNum = 0;
+}
+
+var b = 2;
+function theme(){
+    if (b % 2 == 0) {
+        document.documentElement.style.setProperty('--primary-opacity', '1');
+        rectangle.style.color = "#807f7e";
+        rectangle.style.background = "rgba(28, 28, 30, 1)";
+        document.getElementById('colorMod').innerHTML = "Appearance";
+        for (var i = 0; i < items.length; i++) {
+          items[i].style.backgroundColor = "rgba(28, 28, 30, 1)"; 
+          items[i].style.color = "rgba(255,255,255)";
+        } 
+        b++;
+    }else{
+        document.documentElement.style.setProperty('--primary-opacity', '0');
+        rectangle.style.color = "rgba(54, 54, 54, 0.85)";
+        rectangle.style.backgroundColor = "rgba(255, 255, 255, 0.45)";
+        document.getElementById('colorMod').innerHTML = "Appearance";
+        for (var i = 0; i < items.length; i++) {
+          items[i].style.backgroundColor = "rgba(255, 255, 255, 0.15)"; 
+          items[i].style.color = "rgba(0,0,0)"; 
+        }
+        b++;
+    }
+}
+
+function cancelSpace(event) {
+  if (event.keyCode === 32) {
+    event.preventDefault();
+    return false;
+  }
+}
+
+var tds = document.querySelectorAll('.setting td');
+
+for (let i = 0; i < tds.length; i++) {
+  tds[i].addEventListener('click', function() {
+    var tdsText = tds[i].textContent;
+    tds[i].style.textDecoration = "underline";
+    tds[i].style.color = "green";
+    if (i % 2 == 1){
+      tds[i - 1].style.textDecoration = "none";
+      tds[i - 1].style.color = "rgba(255, 255, 255, 1)";
+    }else{
+      tds[i + 1].style.textDecoration = "none";
+      tds[i + 1].style.color = "rgba(255, 255, 255, 1)";
+    }
+  });
+}
+
+function Hints(selectedTime){
+  if (!isFunctionExecuted) {
+    isFunctionExecuted = true;
+    var time = selectedTime;
+    setInterval(function() {
+      document.getElementById('remainTimeNum').textContent = time - 1;
+      time = time- 1;
+      document.getElementById('remainSymboolNum').textContent = textContent.length - ind;
+      document.getElementById('remainSymboolSpeedNum').textContent = Math.round((ind / (60 - time))*60);
+      if (time == 0){
+        text.style.display = "none";
+        document.getElementById('resultBoxid').style.display = "block";
+        rectangle.style.height = "90%";
+        document.getElementById('RAS').style.display = "none";
+      }
+    }, 1000);
   }
 }
