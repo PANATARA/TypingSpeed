@@ -53,13 +53,7 @@ document.addEventListener("keydown", function(event) {
   var afterSymbol = textContent.substring(ind + 1, ind + 2); 
   var after = textContent.substring(ind + 2);
   Hints(timeValue);
-  if (ind == textContent.length - 1){
-    text.style.display = "none";
-    document.getElementById('resultBoxid').style.display = "block";
-    rectangle.style.height = "90%";
-    document.getElementById('RAS').style.display = "none";
-    
-  }
+
   if (event.key == textContent[ind]){
     correctArr.push(ind);
     text.innerHTML = coloredBefore + 
@@ -144,12 +138,6 @@ function Hints(selectedTime){
       time = time- 1;
       document.getElementById('remainSymboolNum').textContent = textContent.length - ind;
       document.getElementById('remainSymboolSpeedNum').textContent = Math.round((ind / (60 - time))*60);
-      if (time == 0){
-        text.style.display = "none";
-        document.getElementById('resultBoxid').style.display = "block";
-        rectangle.style.height = "90%";
-        document.getElementById('RAS').style.display = "none";
-      }
     }, 1000);
   }
 }
