@@ -12,6 +12,8 @@ var countSymbol = "LONG";
 
 function time60(){timeValue=60;document.getElementById('remainTimeNum').textContent = timeValue;}
 function time30(){timeValue=30;document.getElementById('remainTimeNum').textContent = timeValue;}
+function time90(){timeValue=90;document.getElementById('remainTimeNum').textContent = timeValue;}
+
 
 function randomNum(min, max){
     return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -36,6 +38,7 @@ function changeText(Number){
     ind = 0;
 }
 var erorrArr = [];
+var erorrForResult = 0;
 var correctArr = [];
 document.addEventListener("keydown", function(event) {
   var letterPattern = /^[a-zA-Zа-яА-Я-" "-,-.]$/;
@@ -53,13 +56,7 @@ document.addEventListener("keydown", function(event) {
   var afterSymbol = textContent.substring(ind + 1, ind + 2); 
   var after = textContent.substring(ind + 2);
   Hints(timeValue);
-  if (ind == textContent.length - 1){
-    text.style.display = "none";
-    document.getElementById('resultBoxid').style.display = "block";
-    rectangle.style.height = "90%";
-    document.getElementById('RAS').style.display = "none";
-    
-  }
+  if (ind == textContent.length - 1){showResult()}
   if (event.key == textContent[ind]){
     correctArr.push(ind);
     text.innerHTML = coloredBefore + 
@@ -69,6 +66,7 @@ document.addEventListener("keydown", function(event) {
     after;
     ind++
   } else {
+      erorrForResult++;
       text.innerHTML = coloredBefore + "<span style='color: red;'>" + textContent[ind] + "</span>" + 
       "<span style='text-decoration: underline; text-decoration-skip-ink: none; text-decoration-color: white;'>" + 
       afterSymbol + "</span>" 
@@ -144,12 +142,20 @@ function Hints(selectedTime){
       time = time- 1;
       document.getElementById('remainSymboolNum').textContent = textContent.length - ind;
       document.getElementById('remainSymboolSpeedNum').textContent = Math.round((ind / (60 - time))*60);
-      if (time == 0){
-        text.style.display = "none";
-        document.getElementById('resultBoxid').style.display = "block";
-        rectangle.style.height = "90%";
-        document.getElementById('RAS').style.display = "none";
+      if (time == 0){showResult()
       }
     }, 1000);
   }
+}
+
+function showResult(){
+  text.style.display = "none";
+  document.getElementById('resultBoxid').style.display = "block";
+  rectangle.style.height = "90%";
+  document.getElementById('RAS').style.display = "none";
+  document.getElementById('AccuracyResNum').innerHTML = correctArr.length / (correctArr.length + erorrForResult) * 100 + "%";
+  console.log(erorrArr.length);
+  document.getElementById('correctSimNumRes').innerHTML = correctArr.length;
+  document.getElementById('InorrectSimNumRes').innerHTML = erorrForResult;
+
 }
