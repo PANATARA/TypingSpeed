@@ -151,11 +151,11 @@ function Hints(selectedTime){
 function showResult(){
   text.style.display = "none";
   document.getElementById('resultBoxid').style.display = "block";
-  rectangle.style.height = "90%";
+  rectangle.style.height = "70%";
   document.getElementById('RAS').style.display = "none";
   document.getElementById('AccuracyResNum').innerHTML = correctArr.length / (correctArr.length + erorrForResult) * 100 + "%";
   console.log(erorrArr.length);
   document.getElementById('correctSimNumRes').innerHTML = correctArr.length;
   document.getElementById('InorrectSimNumRes').innerHTML = erorrForResult;
-
+  document.querySelector('.section').style.display = "none";
 }
