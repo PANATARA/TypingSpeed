@@ -141,16 +141,17 @@ body::before {
     width: 95%;
     height: 30%;
     position: absolute;
-    top: 5%;
+    top: 15%;
     left: 50%;
     transform: translateX(-50%);
     font-size: 3.8vw;
+    margin: 0%;
   }
   #inputForMobile{
     width: 95vw;
     height: 30%;
     position: absolute;
-    top: 5%;
+    top: 15%;
     left: 50%;
     transform: translateX(-50%);
     z-index: 1;
@@ -158,14 +159,15 @@ body::before {
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
-    user-select: none
+    user-select: none;
+    margin: 0%;
   }
   .remainAndSetting{
     display: block;
     white-space: nowrap;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     position: absolute;
-    top: 35%;
+    top: 45%;
     left: 50%;
     transform: translateX(-50%); 
     font-size: 300%;
@@ -176,11 +178,13 @@ body::before {
     text-align: left;
     padding-bottom: 100px;
   }
-  
   .tableremain{
     font-size: 70%;
     table-layout: auto;
+    padding-bottom: 5%;
+    
   }
+
   .tableremain tr{
     display: inline-block;
   }
@@ -219,7 +223,7 @@ body::before {
   }
   .section{
     position: absolute;
-    top: 70%;
+    top: 80%;
     left: 50%;
     transform: translateX(-58%);
     display: flex;
