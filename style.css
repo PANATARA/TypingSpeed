@@ -80,7 +80,8 @@ body::before {
   padding: 0 0px;
   margin: 0 auto;
   position: absolute;
-  right: 5%;
+  left: 3%;
+  top: 1%;
 }
 
 .checkbox {
@@ -182,7 +183,7 @@ body::before {
     font-size: 70%;
     table-layout: auto;
     padding-bottom: 5%;
-    
+    padding-left: 7%;
   }
 
   .tableremain tr{
@@ -206,6 +207,7 @@ body::before {
   .checkbox__inner {
     font-size: 30px;
     padding-left: 104px;
+    padding-right: 0%;
   }
   .checkbox__inner:before {
     width: 90px;
