@@ -159,3 +159,52 @@ function showResult(){
   document.getElementById('InorrectSimNumRes').innerHTML = erorrForResult;
   document.querySelector('.section').style.display = "none";
 }
+
+
+var positionY = 0;
+var abc = -220;
+var bcd = -160;
+const sectionItems = document.getElementsByClassName("section_item");
+const itemsArray = [];
+
+for (let i = 0; i < sectionItems.length; i++) {
+    itemsArray.push(sectionItems[i]);
+}
+const currentzIndex = [];
+for (let i = 0; i < itemsArray.length; i++) {
+    currentzIndex.push(parseFloat(window.getComputedStyle(itemsArray[i]).zIndex));  
+}
+
+function upItem() {
+  if (positionY < 6){
+  positionY++;
+  abc = abc + 10;
+  bcd = bcd - 10;
+  sectionItems[positionY].style.zIndex = "7";
+  sectionItems[positionY].style.marginTop = abc + "px"; //значение наплыва активной карточки на верхнюю
+  sectionItems[positionY - 1].style.zIndex = "6";
+  sectionItems[positionY - 1].style.marginBottom = "220px"; //значение вылета карточек
+  (function(currentPosition) {
+    setTimeout(function() {
+      sectionItems[currentPosition - 1].style.marginBottom = "80px"; //конечное значение
+    }, 300);
+  })(positionY);
+}
+}
+
+function downItem(){
+    if (positionY > 0){
+    positionY--;
+    bcd = bcd + 10;
+    abc = abc - 10;
+    sectionItems[positionY].style.zIndex = parseFloat(window.getComputedStyle(sectionItems[positionY]).zIndex) + 1;
+    sectionItems[positionY + 1].style.marginTop = bcd + "px";
+    sectionItems[positionY + 1].style.zIndex = currentzIndex[positionY + 1];
+    sectionItems[positionY].style.marginBottom = "220px";
+    (function(currentPosition) {
+      setTimeout(function() {
+        sectionItems[currentPosition].style.marginBottom = "80px";
+      }, 300);
+    })(positionY);
+  }
+}
