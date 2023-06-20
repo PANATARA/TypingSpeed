@@ -89,16 +89,19 @@
         </div>
     </div>
     
-        <div class="section" id="qwerty">
-            <div class="section_item item1" onclick="changeText('Animals')">Animals</div>
-            <div class="section_item item2" onclick="changeText('People')">People</div>
-            <div class="section_item item3" onclick="changeText('Nature')">Nature</div>
-            <div class="section_item item4" onclick="changeText('inventions')">inventions</div>
-            <div class="section_item item5" onclick="changeText('Facts')">Facts</div>
-            <div class="section_item item6" onclick="changeText('literature')">literature</div>
-            <div class="section_item item7" onclick="changeText('History')">History</div>
-            <div class="section_item item8" onclick="changeText('Music')">Music</div>
-        </div>    
+    <div class="section" id="qwerty">
+      <div class="section_item item1" id="Animals" onclick="changeText('Animals')">Animals</div>
+      <div class="section_item item2" id="People" onclick="changeText('People')">People</div>
+      <div class="section_item item3" id="Nature" onclick="changeText('Nature')">Nature</div>
+      <div class="section_item item4" id="inventions" onclick="changeText('inventions')">inventions</div>
+      <div class="section_item item5" id="Facts" onclick="changeText('Facts')">Facts</div>
+      <div class="section_item item6" id="literature" onclick="changeText('literature')">literature</div>
+      <div class="section_item item7" id="History" onclick="changeText('History')">History</div>
+  </div>
+  <div class="btn">
+    <button onclick="upItem()">UP</button>
+    <button onclick="downItem()">Down</button>
+  </div>    
     <script src="script.js"></script>
 </body>
 </html>
